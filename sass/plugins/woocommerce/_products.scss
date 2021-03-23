@@ -6,6 +6,7 @@ ul.products {
 		list-style: none;
 		position: relative;
 		margin-bottom: 2em;
+		z-index: 0;
 
 		img {
 			display: block;
@@ -52,7 +53,7 @@ ul.products {
 
 			li.product {
 
-				@include column-width( $i );
+				@include column-width($i);
 			}
 
 		}

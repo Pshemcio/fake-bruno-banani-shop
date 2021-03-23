@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'my_shop_theme_woocommerce_setup' );
  * @return void
  */
 function my_shop_theme_woocommerce_scripts() {
-	wp_enqueue_style( 'my-shop-theme-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
+	wp_enqueue_style( 'my-shop-theme-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), version_id() );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {

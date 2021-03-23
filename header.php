@@ -12,48 +12,80 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'my-shop-theme' ); ?></a>
+    <?php wp_body_open(); ?>
+    <div id="page" class="site">
+        <a class="skip-link screen-reader-text"
+            href="#primary"><?php esc_html_e( 'Skip to content', 'my-shop-theme' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
+        <header id="masthead" class="site-header">
+
+            <button id="js-burger" class="burger" aria-controls="primary-menu" aria-expanded="false">
+                <span class="burger__inner"></span>
+            </button>
+
+            <div class="site-branding">
+                <?php
 			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$my_shop_theme_description = get_bloginfo( 'description', 'display' );
-			if ( $my_shop_theme_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $my_shop_theme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'my-shop-theme' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+            </div><!-- .site-branding -->
+
+            <div class="site-header__addons">
+                <button id="js-search-bar" class="site-header__addon">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <button id="js-mini-cart" class="site-header__addon">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+            </div>
+
+            <div class="widget_shopping_cart_content">
+                <?php woocommerce_mini_cart(); ?>
+            </div>
+
+            <div class="search-bar">
+                <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
+            </div>
+
+            <nav id="site-navigation" class="main-navigation">
+                <?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						)
+					);
+				?>
+
+                <ul class="site-navigation__icons">
+                    <li class="site-navigation__icon">
+                        <a href="">
+                            <i class="fas fa-user"></i>
+                            Konto
+                        </a>
+                    </li>
+                    <li class="site-navigation__icon">
+                        <a href="">
+                            <i class="far fa-envelope"></i>
+                            Newsletter
+                        </a>
+                    </li>
+                    <li class="site-navigation__icon">
+                        <a href="">
+                            <i class="fas fa-phone"></i>
+                            Kontakt
+                        </a>
+                    </li>
+                </ul>
+            </nav><!-- #site-navigation -->
+        </header><!-- #masthead -->

@@ -12,6 +12,12 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+function version_id() {
+  if ( WP_DEBUG )
+    return time();
+  return _S_VERSION;
+}
+
 if ( ! function_exists( 'my_shop_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -140,10 +146,12 @@ add_action( 'widgets_init', 'my_shop_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function my_shop_theme_scripts() {
-	wp_enqueue_style( 'my-shop-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_script( 'font-awesome-free', 'https://kit.fontawesome.com/a330ae9e9c.js', array(), version_id(), true );
+
+	wp_enqueue_style( 'my-shop-theme-style', get_stylesheet_uri(), array(), version_id() );
 	wp_style_add_data( 'my-shop-theme-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'my-shop-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'my-shop-theme-main', get_template_directory_uri() . '/js/main.js', array(), version_id(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -183,4 +191,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
+
+	add_filter( 'woocommerce_show_page_title', '__return_false' );
 }

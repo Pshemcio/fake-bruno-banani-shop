@@ -73,6 +73,7 @@ ul.products li.product {
 	list-style: none;
 	position: relative;
 	margin-bottom: 2em;
+	z-index: 0;
 }
 
 ul.products li.product img {
@@ -131,9 +132,9 @@ ul.products li.product .button {
 .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
 	position: absolute;
 	top: 2em;
-	right: 1em;
+	right: 9em;
 	display: block;
-	z-index: 99;
+	z-index: 1;
 }
 
 .single-product div.product .woocommerce-product-gallery .flex-viewport {

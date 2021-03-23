@@ -1,6 +1,6 @@
 /* Navigation
 --------------------------------------------- */
-@import "navigation/navigation";
+@import "header/header";
 
 /* Posts and pages
 --------------------------------------------- */
@@ -25,3 +25,11 @@
 /* Galleries
 --------------------------------------------- */
 @import "media/galleries";
+
+/* Main
+--------------------------------------------- */
+@import "main/main";
+
+/* Footer
+--------------------------------------------- */
+@import "footer/footer";
