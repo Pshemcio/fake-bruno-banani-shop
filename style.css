@@ -469,11 +469,11 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 1em;
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 ol {
@@ -519,6 +519,7 @@ table {
 --------------------------------------------- */
 a {
 	color: #4169e1;
+	text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
@@ -700,7 +701,7 @@ textarea {
 	backdrop-filter: blur(2px);
 	transform: scale(1);
 	opacity: 1;
-	transition: opacity .4s 1s;
+	transition: opacity .4s .2s;
 }
 
 .site-header.main-menu--active .burger::before {
@@ -750,7 +751,7 @@ textarea {
 }
 
 .main-navigation .site-navigation__icons,
-.main-navigation #primary-menu {
+.main-navigation .menu-main-navigation-container {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -758,7 +759,7 @@ textarea {
 	background-color: #fff;
 }
 
-.main-navigation #primary-menu {
+.main-navigation .menu-main-navigation-container {
 	flex-grow: 1;
 }
 

@@ -11,24 +11,55 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'my-shop-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'my-shop-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'my-shop-theme' ), 'my-shop-theme', '<a href="https://github.com/Pshemcio">Przemek Majka</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="site-footer" class="site-footer">
+    <section class="newsletter">
+
+        <h2 class="newsletter__heading">Zapisz się do naszego newslettera żeby dostać 15% zniżkę na następne zamówienie!
+        </h2>
+
+        <?php echo do_shortcode('[newsletter]'); ?>
+
+    </section>
+    <div class="site-footer__wrapper">
+        <div class="footer-container">
+            <?php
+            wp_nav_menu( array(
+                'menu' => '22',
+                'menu_class' => 'footer-container__body'
+            ));
+            ?>
+        </div>
+
+        <div class="footer-container">
+            <ul class="site-footer__socials">
+                <li class="site-footer__social">
+                    <a href="">
+                        <i class="fab fa-github-square"></i> Github
+                    </a>
+                </li>
+                <li class="site-footer__social">
+                    <a href="">
+                        <i class="fab fa-linkedin"></i> Linkedin
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-container">
+            <?php
+            wp_nav_menu( array(
+                'menu' => '23',
+                'menu_class' => 'footer-container__body'
+            ));
+            ?>
+        </div>
+    </div>
+
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

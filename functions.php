@@ -194,3 +194,6 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 	add_filter( 'woocommerce_show_page_title', '__return_false' );
 }
+
+function my_function_admin_bar(){ return false; }
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
