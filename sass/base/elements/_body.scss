@@ -1,15 +1,4 @@
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	padding-top: 12vh;
 }
-
-// body.has-modal {
-// 	height: 100vh;
-// 	overflow-y: hidden;
-// }
-
-// body.has-modal {
-// 	height: 101%;
-// 	overflow-y: scroll;
-// 	position: fixed;
-// 	width: 100%;
-// }

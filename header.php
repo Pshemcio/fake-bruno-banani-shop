@@ -33,11 +33,16 @@
                 <span class="burger__inner"></span>
             </button>
 
-            <div class="site-branding">
+
+            <a href="/" class="site-branding">
+
+            </a><!-- .site-branding -->
+
+            <!-- <div class="site-branding">
                 <?php
-			the_custom_logo();
+			// the_custom_logo();
 			?>
-            </div><!-- .site-branding -->
+            </div> -->
 
             <div class="site-header__addons">
                 <button id="js-search-bar" class="site-header__addon site-header__addon--search">

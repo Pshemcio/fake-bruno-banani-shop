@@ -19,7 +19,7 @@ const globalNamespace = {
 
 const header = document.getElementById('masthead');
 
-const showDialog = () => {
+const showModal = () => {
     if (document.body.classList.contains('has-modal')) {
         return;
     }
@@ -30,7 +30,7 @@ const showDialog = () => {
     body.style.position = 'fixed';
     body.style.top = `-${scrollY}`;
 };
-const closeDialog = () => {
+const closeModal = () => {
     const body = document.body;
     const scrollY = body.style.top;
     body.style.position = '';
@@ -41,12 +41,12 @@ const closeDialog = () => {
 
 const handleNavButtonClick = (className) => {
     if (className === 'search-bar--active' && document.body.classList.contains('has-modal')) {
-        closeDialog();
+        closeModal();
     }
 
     if (globalNamespace.navClassName === className || className === 'reset') {
         if (className !== 'search-bar--active') {
-            closeDialog();
+            closeModal();
         }
         header.className = 'site-header';
         globalNamespace.navClassName = '';
@@ -76,7 +76,7 @@ const handleNavButtonClick = (className) => {
             break;
         case false:
             if (className !== 'search-bar--active') {
-                showDialog();
+                showModal();
             }
 
             header.className = `site-header active ${className}`;
@@ -84,6 +84,13 @@ const handleNavButtonClick = (className) => {
     }
 
     globalNamespace.navClassName = className;
+};
+
+const handleNavSubmenu = (e) => {
+    if (e.target.classList.contains('menu-item-has-children')) {
+        console.log(e.target);
+        e.target.querySelector('.sub-menu').classList.toggle('show');
+    }
 };
 
 const handleNavigation = (e) => {
@@ -101,7 +108,7 @@ const handleNavigation = (e) => {
             handleNavButtonClick('reset');
             break;
         default:
-            console.log(e.target.id);
+            handleNavSubmenu(e);
             break;
     }
 };
