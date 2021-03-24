@@ -657,7 +657,7 @@ textarea {
 	height: 90vh;
 	z-index: -3;
 	opacity: 0;
-	background-color: rgba(14, 18, 36, 0.4);
+	background-color: rgba(14, 18, 36, 0.2);
 	transform: scale(0);
 	transition: opacity .4s, transform 0s 2s;
 }
@@ -679,10 +679,6 @@ textarea {
 	margin-left: 7px;
 }
 
-.site-header__addon.active {
-	color: red;
-}
-
 .site-header .site-branding {
 	height: 80%;
 }
@@ -701,9 +697,43 @@ textarea {
 }
 
 .site-header.active::after {
+	backdrop-filter: blur(2px);
 	transform: scale(1);
 	opacity: 1;
 	transition: opacity .4s 1s;
+}
+
+.site-header.main-menu--active .burger::before {
+	transform: translate(-62.5%, -50%) rotate(-45deg);
+}
+
+.site-header.main-menu--active .burger__inner {
+	transform: translate(130%, -50%);
+}
+
+.site-header.main-menu--active .burger::after {
+	transform: translate(-62.5%, -50%) rotate(45deg);
+}
+
+.site-header.main-menu--active .main-navigation {
+	transition: transform 1.1s cubic-bezier(1, 0, 0, 1);
+	transform: translateX(0);
+}
+
+.site-header.mini-cart--active .widget_shopping_cart_content {
+	transform: translateX(0);
+}
+
+.site-header.mini-cart--active .site-header__addon--cart {
+	color: #21759b;
+}
+
+.site-header.search-bar--active .search-bar {
+	transform: translateY(0);
+}
+
+.site-header.search-bar--active .site-header__addon--search {
+	color: #21759b;
 }
 
 .main-navigation {
@@ -743,11 +773,6 @@ textarea {
 	margin: 0;
 }
 
-.main-navigation.active {
-	transition: transform 1.1s cubic-bezier(1, 0, 0, 1);
-	transform: translateX(0);
-}
-
 .burger {
 	position: relative;
 	width: 40px;
@@ -782,18 +807,6 @@ textarea {
 	top: 75%;
 }
 
-.burger.active::before {
-	transform: translate(-62.5%, -50%) rotate(-45deg);
-}
-
-.burger.active .burger__inner {
-	transform: translate(130%, -50%);
-}
-
-.burger.active::after {
-	transform: translate(-62.5%, -50%) rotate(45deg);
-}
-
 .widget_shopping_cart_content {
 	position: absolute;
 	top: 100%;
@@ -805,10 +818,6 @@ textarea {
 	transition: transform 1.1s cubic-bezier(1, 0, 0, 1);
 }
 
-.widget_shopping_cart_content.active {
-	transform: translateX(0);
-}
-
 .search-bar {
 	position: absolute;
 	top: 100%;
@@ -817,10 +826,6 @@ textarea {
 	transform: translateY(-100%);
 	z-index: -2;
 	transition: transform 1s cubic-bezier(1, 0, 0, 1);
-}
-
-.search-bar.active {
-	transform: translateY(0);
 }
 
 /* Posts and pages

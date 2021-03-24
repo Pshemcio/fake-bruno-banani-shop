@@ -1,3 +1,4 @@
+/* eslint-disable template-curly-spacing */
 /* eslint-disable space-unary-ops */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-console */
@@ -9,62 +10,51 @@ document.addEventListener('DOMContentLoaded', () => {
     header.addEventListener('click', handleNavigation);
 });
 
+let test;
 const header = document.getElementById('masthead');
 
-const handleNavButtonClick = (box, btn) => {
-    btn.classList.toggle('active');
-    box.classList.toggle('active');
-    header.classList.toggle('active');
+const handleNavButtonClick = (className) => {
+    if (test === className || className === 'reset') {
+        header.className = 'site-header';
+        test = '';
+        return;
+    }
 
+    if (className === 'search-bar--active') {
+        header.className = `site-header ${className}`;
+        test = className;
+        return;
+    }
 
-    // switch (action) {
-    //     case true:
-    //         btn.classList.remove('active');
-    //         box.classList.remove('active');
-    //         header.classList.remove('active');
-    //         break;
+    if (!header.classList.contains('active')) {
+        header.className = `site-header active ${className}`;
+    } else if (header.classList.contains('active')) {
+        header.className = `site-header active`;
 
-    //     case false:
-    //         btn.classList.add('active');
-    //         box.classList.add('active');
-    //         header.classList.add('active');
-    //         break;
-    //     default:
-    //         console.log('oko');
-    //         break;
-    // }
+        setTimeout(() => {
+            header.className = `site-header active ${className}`;
+        }, 300);
+    }
+
+    test = className;
 };
 
 const handleNavigation = (e) => {
-    const mainNavigation = header.querySelector('.main-navigation');
-    const miniCart = header.querySelector('.widget_shopping_cart_content');
-    const searchBar = header.querySelector('.search-bar');
-
     switch (e.target.id) {
         case 'js-burger':
-            handleNavButtonClick(mainNavigation, e.target);
+            handleNavButtonClick('main-menu--active');
             break;
         case 'js-mini-cart':
-            handleNavButtonClick(miniCart, e.target);
+            handleNavButtonClick('mini-cart--active');
             break;
         case 'js-search-bar':
-            handleNavButtonClick(searchBar, e.target);
+            handleNavButtonClick('search-bar--active');
+            break;
+        case 'masthead':
+            handleNavButtonClick('reset');
             break;
         default:
+            console.log(e.target.id);
             break;
     }
-
-    // switch (e.target.id) {
-    //     case 'js-burger':
-    //         e.target.classList.contains('active') ? handleNavButtonClick(mainNavigation, true, e.target) : handleNavButtonClick(mainNavigation, false, e.target);
-    //         break;
-    //     case 'js-mini-cart':
-    //         e.target.classList.contains('active') ? handleNavButtonClick(miniCart, true, e.target) : handleNavButtonClick(miniCart, false, e.target);
-    //         break;
-    //     case 'js-search-bar':
-    //         e.target.classList.contains('active') ? handleNavButtonClick(searchBar, true, e.target) : handleNavButtonClick(searchBar, false, e.target);
-    //         break;
-    //     default:
-    //         break;
-    // }
 };

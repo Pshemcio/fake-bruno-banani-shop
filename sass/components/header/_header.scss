@@ -33,7 +33,7 @@
 		height: 90vh;
 		z-index: -3;
 		opacity: 0;
-		background-color: rgba(14, 18, 36, 0.4);
+		background-color: rgba(14, 18, 36, 0.2);
 		transform: scale(0);
 		transition: opacity .4s, transform 0s 2s;
 	}
@@ -52,10 +52,6 @@
 
 		&:last-of-type {
 			margin-left: 7px;
-		}
-
-		&.active {
-			color: red;
 		}
 	}
 
@@ -78,9 +74,49 @@
 
 	&.active {
 		&::after {
+			backdrop-filter: blur(2px);
 			transform: scale(1);
 			opacity: 1;
 			transition: opacity .4s 1s;
+		}
+	}
+
+	&.main-menu--active {
+		.burger::before {
+			transform: translate(-62.5%, -50%) rotate(-45deg);
+		}
+
+		.burger__inner {
+			transform: translate(130%, -50%);
+		}
+
+		.burger::after {
+			transform: translate(-62.5%, -50%) rotate(45deg);
+		}
+
+		.main-navigation {
+			transition: transform 1.1s cubic-bezier(1, 0, 0, 1);
+			transform: translateX(0);
+		}
+	}
+
+	&.mini-cart--active {
+		.widget_shopping_cart_content {
+			transform: translateX(0);
+		}
+
+		#{ $self }__addon--cart {
+			color: $color__text-screen;
+		}
+	}
+
+	&.search-bar--active {
+		.search-bar {
+			transform: translateY(0);
+		}
+
+		#{ $self }__addon--search {
+			color: $color__text-screen;
 		}
 	}
 }
@@ -120,11 +156,6 @@
 		list-style: none;
 		margin: 0;
 	}
-
-	&.active {
-		transition: transform 1.1s cubic-bezier(1, 0, 0, 1);
-		transform: translateX(0);
-	}
 }
 
 .burger {
@@ -162,20 +193,6 @@
 	&::after {
 		top: 75%;
 	}
-
-	&.active {
-		&::before {
-			transform: translate(-62.5%, -50%) rotate(-45deg);
-		}
-
-		#{ $self }__inner {
-			transform: translate(130%, -50%);
-		}
-
-		&::after {
-			transform: translate(-62.5%, -50%) rotate(45deg);
-		}
-	}
 }
 
 .widget_shopping_cart_content {
@@ -187,10 +204,6 @@
 	background-color: $color__background-body;
 	transform: translateX(100vw);
 	transition: transform 1.1s cubic-bezier(1, 0, 0, 1);
-
-	&.active {
-		transform: translateX(0);
-	}
 }
 
 .search-bar {
@@ -201,8 +214,4 @@
 	transform: translateY(-100%);
 	z-index: -2;
 	transition: transform 1s cubic-bezier(1, 0, 0, 1);
-
-	&.active {
-		transform: translateY(0);
-	}
 }

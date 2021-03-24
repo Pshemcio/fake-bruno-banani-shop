@@ -40,11 +40,11 @@
             </div><!-- .site-branding -->
 
             <div class="site-header__addons">
-                <button id="js-search-bar" class="site-header__addon">
+                <button id="js-search-bar" class="site-header__addon site-header__addon--search">
                     <i class="fas fa-search"></i>
                 </button>
 
-                <button id="js-mini-cart" class="site-header__addon">
+                <button id="js-mini-cart" class="site-header__addon site-header__addon--cart">
                     <i class="fas fa-shopping-cart"></i>
                 </button>
             </div>
