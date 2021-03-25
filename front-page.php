@@ -1,14 +1,12 @@
 <?php get_header(); ?>
 <section class="hero">
-    <a href="/sklep" class="hero__wrapper">
-        <div class="wrapper">
-            <div class="wrapper__heading">
-                <span>THE NEW COLLECTION</span>
-                <h1>Elegant & Luxury</h1>
-                <div class="button button-white">BROWSE COLLECTION</div>
-            </div>
+    <div class="hero__wrapper">
+        <div class="hero__container">
+            <span class="hero__info">Odkryj nowy zapach</span>
+            <h1 class="hero__heading">Man's Best - EdT</h1>
+            <a href="/nowosci" class="hero__button">Odkrywaj</a>
         </div>
-    </a>
+    </div>
 </section>
 
 <section class="standard-promo">

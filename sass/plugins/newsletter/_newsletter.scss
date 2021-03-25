@@ -1,0 +1,40 @@
+.newsletter {
+    color: $color__text-secondary;
+    background-color: $color__background-body--secondary;
+    padding-bottom: 20px;
+
+    &__heading,
+    &__paragraph {
+        margin: 0;
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 2.5em;
+        padding-top: 15px;
+    }
+
+    &__paragraph {
+        padding: 0 15px;
+    }
+
+    .tnp-subscription {
+        form {
+            padding: 0 20px;
+        }
+
+        input[type="email"] {
+            margin: 0 auto;
+
+            &::placeholder {
+                content: "cześć";
+            }
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 30px;
+            margin-right: auto;
+        }
+    }
+}

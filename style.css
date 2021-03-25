@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: My Shop Theme
 Theme URI: http://underscores.me/
@@ -42,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Captions
 	- Galleries
 # plugins
+	- Newsletter
 	- Jetpack infinite scroll
 # Utilities
 	- Accessibility
@@ -519,7 +521,7 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #2b2929;
 	text-decoration: none;
 }
 
@@ -792,6 +794,10 @@ textarea {
 	display: none;
 }
 
+.main-navigation .sub-menu a {
+	padding: 10px 0;
+}
+
 .main-navigation .sub-menu.show {
 	display: block;
 }
@@ -851,15 +857,15 @@ textarea {
 	transition: transform 1s cubic-bezier(1, 0, 0, 1);
 }
 
-/* Posts and pages
+/* Content
 --------------------------------------------- */
 .sticky {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
+.post h1,
+.page h1 {
+	margin: 0;
 }
 
 .updated:not(.published) {
@@ -986,19 +992,89 @@ textarea {
 
 /* Main
 --------------------------------------------- */
-#primary {
-	padding-top: 5vh;
-}
-
 /* Footer
 --------------------------------------------- */
 .site-footer {
-	min-height: 100vh;
+	background-image: url(images/footer_bg.jpg);
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 5vh;
+}
+
+.site-footer::before {
+	content: "";
+	display: block;
+	height: 40vh;
+	background-image: url(images/newsletter_800x800@2x.jpg);
+	background-size: cover;
+	background-position: right;
+}
+
+.site-footer__container--inner {
+	margin: 20px 0;
+	padding: 0;
+	text-align: center;
+}
+
+.site-footer__container--inner a {
+	display: block;
+	padding: 2px 0;
+}
+
+.site-footer__socials {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.site-footer__socials a {
+	display: inline-block;
+	padding: 10px 10px;
 }
 
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+/* newsletter
+--------------------------------------------- */
+.newsletter {
+	color: #eee;
+	background-color: #000;
+	padding-bottom: 20px;
+}
+
+.newsletter__heading, .newsletter__paragraph {
+	margin: 0;
+	text-align: center;
+}
+
+.newsletter__heading {
+	font-size: 2.5em;
+	padding-top: 15px;
+}
+
+.newsletter__paragraph {
+	padding: 0 15px;
+}
+
+.newsletter .tnp-subscription form {
+	padding: 0 20px;
+}
+
+.newsletter .tnp-subscription input[type="email"] {
+	margin: 0 auto;
+}
+
+.newsletter .tnp-subscription input[type="email"]::placeholder {
+	content: "cześć";
+}
+
+.newsletter .tnp-subscription input[type="submit"] {
+	width: auto;
+	padding: 10px 30px;
+	margin-right: auto;
+}
+
 /* Jetpack infinite scroll
 --------------------------------------------- */
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */

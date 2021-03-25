@@ -13,9 +13,10 @@
 
 <footer id="site-footer" class="site-footer">
     <section class="newsletter">
-
-        <h2 class="newsletter__heading">Zapisz się do naszego newslettera żeby dostać 15% zniżkę na następne zamówienie!
-        </h2>
+        <h3 class="newsletter__heading">Newsletter</h3>
+        <p class="newsletter__paragraph">
+            Zapisz się do naszego newslettera żeby dostać 15% zniżkę na następne zamówienie!
+        </p>
 
         <?php echo do_shortcode('[newsletter]'); ?>
 
@@ -25,33 +26,27 @@
             <?php
             wp_nav_menu( array(
                 'menu' => '22',
-                'menu_class' => 'footer-container__body'
+                'menu_class' => 'site-footer__container--inner'
             ));
             ?>
         </div>
 
-        <div class="footer-container">
-            <ul class="site-footer__socials">
-                <li class="site-footer__social">
-                    <a href="">
-                        <i class="fab fa-github-square"></i> Github
-                    </a>
-                </li>
-                <li class="site-footer__social">
-                    <a href="">
-                        <i class="fab fa-linkedin"></i> Linkedin
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer-container">
+        <div class="site-footer__container">
             <?php
             wp_nav_menu( array(
                 'menu' => '23',
-                'menu_class' => 'footer-container__body'
+                'menu_class' => 'site-footer__container--inner'
             ));
             ?>
+        </div>
+
+        <div class="site-footer__socials">
+            <a href="" class="site-footer__social">
+                <i class="fab fa-github-square"></i> Github
+            </a>
+            <a href="" class="site-footer__social">
+                <i class="fab fa-linkedin"></i> Linkedin
+            </a>
         </div>
     </div>
 

@@ -1,3 +1,40 @@
 .site-footer {
-    min-height: 100vh;
+    background-image: url(images/footer_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 5vh;
+
+    &::before {
+        content: "";
+        display: block;
+        height: 40vh;
+        background-image: url(images/newsletter_800x800@2x.jpg);
+        background-size: cover;
+        background-position: right;
+    }
+
+    &__container {
+
+        &--inner {
+            margin: 20px 0;
+            padding: 0;
+            text-align: center;
+
+            a {
+                display: block;
+                padding: 2px 0;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            padding: 10px 10px;
+        }
+    }
 }

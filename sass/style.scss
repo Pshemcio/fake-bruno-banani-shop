@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Captions
 	- Galleries
 # plugins
+	- Newsletter
 	- Jetpack infinite scroll
 # Utilities
 	- Accessibility
@@ -84,6 +85,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+
+/* newsletter
+--------------------------------------------- */
+@import "plugins/newsletter/newsletter";
 
 /* Jetpack infinite scroll
 --------------------------------------------- */

@@ -173,6 +173,10 @@
 	.sub-menu {
 		display: none;
 
+		a {
+			padding: 10px 0;
+		}
+
 		&.show {
 			display: block;
 		}
