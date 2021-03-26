@@ -1,12 +1,53 @@
 <?php get_header(); ?>
 <section class="hero">
-    <div class="hero__wrapper">
+    <div class="hero__wrapper hero__wrapper--mans-best">
         <div class="hero__container">
-            <span class="hero__info">Odkryj nowy zapach</span>
-            <h1 class="hero__heading">Man's Best - EdT</h1>
-            <a href="/nowosci" class="hero__button">Odkrywaj</a>
+            <h2 class="hero__heading">Man's Best</h2>
+            <p class="hero__info">Zapach prawdziwego mężczyzny</p>
+            <a href="produkt/mans-best-edt/" class="hero__button">Odkrywaj</a>
         </div>
     </div>
+</section>
+
+<section class="hero">
+    <div class="hero__wrapper hero__wrapper--womans-best">
+        <div class="hero__container">
+            <h2 class="hero__heading">Woman's Best</h2>
+            <p class="hero__info">Zapach prawdziwej damy</p>
+            <a href="produkt/mans-best-edt/" class="hero__button">Odkrywaj</a>
+        </div>
+    </div>
+</section>
+
+<section class="front-categories">
+    <h2 class="front-categories__heading">Nasze kategorie</h2>
+    <div class="front-categories__wrapper">
+        <div class="front-categories__container front-categories__container--men">
+            <h3 class="front-categories__inner-heading">wybór mężczyzn</h3>
+            <a href="/dla-niego" class="front-categories__button">Wszystko dla niego</a>
+        </div>
+        <div class="front-categories__container front-categories__container--women">
+            <h3 class="front-categories__inner-heading">wybór kobiet</h3>
+            <a href="/dla-niej" class="front-categories__button">Wszystko dla niej</a>
+        </div>
+    </div>
+</section>
+
+<section class="front-about">
+    <h1 class="front-about__heading">bruno banani
+        <span class="front-about__heading-info">wszystko czego
+            potrzebujesz
+        </span>
+    </h1>
+    <p class="front-about__paragraph">
+        Typical bruno banani: The cult international underwear and swimwear brand, based in Chemnitz in eastern Germany,
+        has been revolutionising underwear drawers the world over since 1993. Founded by trained economist Wolfgang
+        Jassner, the company was making marketing and sales history in no time. Campaigns such as getting Tongan Luger
+        Fuahea Semi to compete under the name Bruno Banani at the Olympics or testing bruno banani underwear in orbit on
+        the Mir space station brought the family business to international prominence. bruno banani now exports to 17
+        countries worldwide and has issued a range of product licenses. Its products are available through the online
+        shop, in outlet stores, and from selected specialist retailers.
+    </p>
 </section>
 
 <section class="standard-promo">

@@ -31,7 +31,7 @@ function my_shop_theme_woocommerce_setup() {
 			),
 		)
 	);
-	add_theme_support( 'wc-product-gallery-zoom' );
+	// add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
@@ -118,8 +118,8 @@ if ( ! function_exists( 'my_shop_theme_woocommerce_wrapper_before' ) ) {
 	 */
 	function my_shop_theme_woocommerce_wrapper_before() {
 		?>
-			<main id="primary" class="site-main">
-		<?php
+<main id="primary" class="site-main">
+    <?php
 	}
 }
 add_action( 'woocommerce_before_main_content', 'my_shop_theme_woocommerce_wrapper_before' );
@@ -134,8 +134,8 @@ if ( ! function_exists( 'my_shop_theme_woocommerce_wrapper_after' ) ) {
 	 */
 	function my_shop_theme_woocommerce_wrapper_after() {
 		?>
-			</main><!-- #main -->
-		<?php
+</main><!-- #main -->
+<?php
 	}
 }
 add_action( 'woocommerce_after_main_content', 'my_shop_theme_woocommerce_wrapper_after' );
@@ -150,48 +150,50 @@ add_action( 'woocommerce_after_main_content', 'my_shop_theme_woocommerce_wrapper
 			my_shop_theme_woocommerce_header_cart();
 		}
 	?>
- */
+*/
 
 if ( ! function_exists( 'my_shop_theme_woocommerce_cart_link_fragment' ) ) {
-	/**
-	 * Cart Fragments.
-	 *
-	 * Ensure cart contents update when products are added to the cart via AJAX.
-	 *
-	 * @param array $fragments Fragments to refresh via AJAX.
-	 * @return array Fragments to refresh via AJAX.
-	 */
-	function my_shop_theme_woocommerce_cart_link_fragment( $fragments ) {
-		ob_start();
-		my_shop_theme_woocommerce_cart_link();
-		$fragments['a.cart-contents'] = ob_get_clean();
+/**
+* Cart Fragments.
+*
+* Ensure cart contents update when products are added to the cart via AJAX.
+*
+* @param array $fragments Fragments to refresh via AJAX.
+* @return array Fragments to refresh via AJAX.
+*/
+function my_shop_theme_woocommerce_cart_link_fragment( $fragments ) {
+ob_start();
+my_shop_theme_woocommerce_cart_link();
+$fragments['a.cart-contents'] = ob_get_clean();
 
-		return $fragments;
-	}
+return $fragments;
+}
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'my_shop_theme_woocommerce_cart_link_fragment' );
 
 if ( ! function_exists( 'my_shop_theme_woocommerce_cart_link' ) ) {
-	/**
-	 * Cart Link.
-	 *
-	 * Displayed a link to the cart including the number of items present and the cart total.
-	 *
-	 * @return void
-	 */
-	function my_shop_theme_woocommerce_cart_link() {
-		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'my-shop-theme' ); ?>">
-			<?php
+/**
+* Cart Link.
+*
+* Displayed a link to the cart including the number of items present and the cart total.
+*
+* @return void
+*/
+function my_shop_theme_woocommerce_cart_link() {
+?>
+<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>"
+    title="<?php esc_attr_e( 'View your shopping cart', 'my-shop-theme' ); ?>">
+    <?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
 				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'my-shop-theme' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
-			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
-		</a>
-		<?php
+    <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span
+        class="count"><?php echo esc_html( $item_count_text ); ?></span>
+</a>
+<?php
 	}
 }
 
@@ -208,20 +210,20 @@ if ( ! function_exists( 'my_shop_theme_woocommerce_header_cart' ) ) {
 			$class = '';
 		}
 		?>
-		<ul id="site-header-cart" class="site-header-cart">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php my_shop_theme_woocommerce_cart_link(); ?>
-			</li>
-			<li>
-				<?php
+<ul id="site-header-cart" class="site-header-cart">
+    <li class="<?php echo esc_attr( $class ); ?>">
+        <?php my_shop_theme_woocommerce_cart_link(); ?>
+    </li>
+    <li>
+        <?php
 				$instance = array(
 					'title' => '',
 				);
 
 				the_widget( 'WC_Widget_Cart', $instance );
 				?>
-			</li>
-		</ul>
-		<?php
+    </li>
+</ul>
+<?php
 	}
 }

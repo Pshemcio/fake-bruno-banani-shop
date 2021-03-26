@@ -460,7 +460,6 @@ big {
 --------------------------------------------- */
 body {
 	background: #fff;
-	padding-top: 12vh;
 }
 
 hr {
@@ -881,6 +880,97 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.hero__wrapper {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 18vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.hero__wrapper--mans-best {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/mans-best.jpg");
+}
+
+.hero__wrapper--womans-best {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/womans-best.jpg");
+}
+
+.hero__container {
+	color: #eee;
+	text-align: center;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.hero__info {
+	font-size: 1.2em;
+	margin: 5px 0 25px;
+	padding: 0 40px;
+}
+
+.hero__heading {
+	font-size: 2.5em;
+	margin: 0;
+}
+
+.hero__button {
+	display: inline-block;
+	background-color: #fff;
+	color: #2b2929;
+	font-weight: 600;
+	padding: 10px 40px;
+}
+
+.front-categories {
+	width: 100%;
+	text-align: center;
+	padding: 30px 20px;
+}
+
+.front-categories__container {
+	height: 40vh;
+	margin: 30px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-size: cover;
+	background-position: center;
+	color: #eee;
+	text-transform: uppercase;
+}
+
+.front-categories__container--men {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/men-cat.jpg");
+}
+
+.front-categories__container--women {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/women-cat.jpg");
+}
+
+.front-categories__heading {
+	margin: 0 0 20px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.front-categories__inner-heading {
+	font-weight: 400;
+	margin: 5px;
+	font-size: 14px;
+}
+
+.front-categories__button {
+	display: inline-block;
+	background-color: #2b2929;
+	color: #fff;
+	font-weight: 600;
+	padding: 10px 40px;
 }
 
 /* Comments
