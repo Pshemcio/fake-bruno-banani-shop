@@ -16,6 +16,10 @@
         &--womans-best {
             background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/womans-best.jpg");
         }
+
+        &--absolute-man {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/absolute-man.jpg");
+        }
     }
 
     &__container {
@@ -49,9 +53,7 @@
     width: 100%;
     text-align: center;
     padding: 30px 20px;
-
-
-    &__wrapper {}
+    background-color: $color__background-body--tertiary;
 
     &__container {
         height: 40vh;
@@ -71,6 +73,14 @@
         &--women {
             background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/women-cat.jpg");
         }
+
+        &--fragrance-men {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/men-fragrance.jpg");
+        }
+
+        &--fragrance-women {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/women-fragrance.jpg");
+        }
     }
 
     &__heading {
@@ -87,9 +97,35 @@
 
     &__button {
         display: inline-block;
-        background-color: $color__link;
+        background-color: rgba(0, 0, 0, 0.3);
         color: $color__background-body;
         font-weight: 600;
         padding: 10px 40px;
+    }
+}
+
+.front-about {
+    background-color: $color__background-body--secondary;
+    padding: 30px 20px;
+    color: $color__text-secondary;
+    text-align: center;
+
+    &__heading {
+        margin-top: 0;
+        text-transform: uppercase;
+
+        &-info {
+            display: block;
+            font-weight: 300;
+            font-size: 16px;
+        }
+    }
+}
+
+.shop-section {
+    &__heading {
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
     }
 }

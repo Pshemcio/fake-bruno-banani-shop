@@ -901,6 +901,10 @@ textarea {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/womans-best.jpg");
 }
 
+.hero__wrapper--absolute-man {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/absolute-man.jpg");
+}
+
 .hero__container {
 	color: #eee;
 	text-align: center;
@@ -931,6 +935,7 @@ textarea {
 	width: 100%;
 	text-align: center;
 	padding: 30px 20px;
+	background-color: #f7f7f7;
 }
 
 .front-categories__container {
@@ -953,6 +958,14 @@ textarea {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/women-cat.jpg");
 }
 
+.front-categories__container--fragrance-men {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/men-fragrance.jpg");
+}
+
+.front-categories__container--fragrance-women {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/women-fragrance.jpg");
+}
+
 .front-categories__heading {
 	margin: 0 0 20px;
 	text-transform: uppercase;
@@ -967,10 +980,34 @@ textarea {
 
 .front-categories__button {
 	display: inline-block;
-	background-color: #2b2929;
+	background-color: rgba(0, 0, 0, 0.3);
 	color: #fff;
 	font-weight: 600;
 	padding: 10px 40px;
+}
+
+.front-about {
+	background-color: #000;
+	padding: 30px 20px;
+	color: #eee;
+	text-align: center;
+}
+
+.front-about__heading {
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+.front-about__heading-info {
+	display: block;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.shop-section__heading {
+	text-align: center;
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
 /* Comments
