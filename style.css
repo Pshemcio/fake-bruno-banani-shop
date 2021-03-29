@@ -401,6 +401,7 @@ h3,
 h4,
 h5,
 h6 {
+	margin: 0;
 	clear: both;
 }
 
@@ -920,7 +921,6 @@ textarea {
 
 .hero__heading {
 	font-size: 2.5em;
-	margin: 0;
 }
 
 .hero__button {
@@ -934,7 +934,7 @@ textarea {
 .front-categories {
 	width: 100%;
 	text-align: center;
-	padding: 30px 20px;
+	padding: 30px 20px 20px;
 	background-color: #f7f7f7;
 }
 
@@ -1004,10 +1004,19 @@ textarea {
 	font-size: 16px;
 }
 
+.shop-section {
+	padding: 30px 0 10px;
+}
+
+.shop-section__container {
+	padding: 0;
+}
+
 .shop-section__heading {
 	text-align: center;
 	font-weight: 300;
 	text-transform: uppercase;
+	margin-bottom: 20px;
 }
 
 /* Comments

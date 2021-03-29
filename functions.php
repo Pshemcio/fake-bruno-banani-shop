@@ -197,3 +197,17 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 function my_function_admin_bar(){ return false; }
 add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+
+/**
+ * Change price display on product card
+ */
+add_filter( 'woocommerce_variable_price_html', 'custom_min_max_variable_price_html', 10, 2 );
+function custom_min_max_variable_price_html( $price, $product ) {
+    $prices = $product->get_variation_prices( true );
+    $min_price = current( $prices['price'] );
+
+    $min_price_html = wc_price( $min_price ) . $product->get_price_suffix();
+    $price = sprintf( __( 'Od %1$s', 'woocommerce' ), $min_price_html );
+
+    return $price;
+}
