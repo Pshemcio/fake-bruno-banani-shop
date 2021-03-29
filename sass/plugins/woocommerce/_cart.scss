@@ -1,0 +1,99 @@
+.woocommerce-cart {
+
+    .woocommerce {
+        .woocommerce-cart-form {
+            // display: none;
+            background-color: #fff;
+
+            &__cart-item {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 0 10px;
+
+                .product {
+                    &-remove {
+                        position: absolute;
+                        top: 5%;
+                        right: 20px;
+                        font-size: 40px;
+                    }
+
+                    &-thumbnail {
+                        flex-basis: 20%;
+
+                        &::before {
+                            content: '';
+                        }
+
+                        a {
+                            display: block;
+                            text-align: center;
+
+                            img {
+                                display: block;
+                                height: 100px;
+                                width: 100px;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+
+                    &-name {
+                        flex-basis: 55%;
+
+                        &::before {
+                            content: '';
+                        }
+                    }
+
+                    &-price,
+                    &-quantity,
+                    &-subtotal {
+                        flex-basis: 100%;
+                        padding-left: 100px;
+                    }
+
+                    &-quantity {
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding: 0 10px;
+
+                .coupon {
+                    flex-basis: 100%;
+                    display: flex;
+                    margin: 20px 0;
+
+                    label {
+                        display: none;
+                    }
+
+                    input {
+                        flex-grow: 1;
+                        border-radius: 0;
+                    }
+
+                    button {
+                        color: $color__background-body;
+                        background-color: $color__link;
+                        padding: 0 10px;
+                        border: 1px solid $color__link;
+
+                        &::after {
+                            content: '\f054';
+                            font-family: FontAwesome;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

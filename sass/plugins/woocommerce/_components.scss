@@ -89,7 +89,7 @@ p.stars {
 
 		&:hover {
 
-			~ a::before {
+			~a::before {
 				content: "\53";
 				color: $color__text-main;
 				opacity: 0.25;
@@ -119,7 +119,7 @@ p.stars {
 				opacity: 1;
 			}
 
-			~ a::before {
+			~a::before {
 				content: "\53";
 				color: $color__text-main;
 				opacity: 0.25;
@@ -224,7 +224,23 @@ p.stars {
 .woocommerce-noreviews,
 p.no-comments {
 	background-color: $woocommerce__color-success;
+	color: white;
+	padding: 4px 10px;
 	clear: both;
+	margin: 0;
+	animation: showInfo 1s 1s both;
+}
+
+@keyframes showInfo {
+	0% {
+		transform: translateX(-200%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 
 .woocommerce-info,
@@ -253,25 +269,25 @@ p.no-comments {
 	/**
 	 * Header cart
 	 */
-	.site-header-cart {
+	// .site-header-cart {
 
-		.widget_shopping_cart {
-			position: absolute;
-			top: 100%;
-			width: 100%;
-			z-index: 999999;
-			left: -999em;
-			display: block;
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-		}
+	// 	.widget_shopping_cart {
+	// 		position: absolute;
+	// 		top: 100%;
+	// 		width: 100%;
+	// 		z-index: 999999;
+	// 		left: -999em;
+	// 		display: block;
+	// 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	// 	}
 
-		&:hover,
-		&.focus {
+	// 	&:hover,
+	// 	&.focus {
 
-			.widget_shopping_cart {
-				left: 0;
-				display: block;
-			}
-		}
-	}
+	// 		.widget_shopping_cart {
+	// 			left: 0;
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
 }

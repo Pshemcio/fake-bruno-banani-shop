@@ -96,7 +96,7 @@
 <section class="shop-section">
     <h2 class="shop-section__heading">Nowości</h2>
     <div class="items">
-        <?php echo do_shortcode('[recent_products limit="4" orderbyid="id" order="DESC"]'); ?>
+        <?php echo do_shortcode('[recent_products limit="8" orderbyid="id" order="DESC"]'); ?>
     </div>
 </section>
 

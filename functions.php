@@ -211,3 +211,71 @@ function custom_min_max_variable_price_html( $price, $product ) {
 
     return $price;
 }
+
+// Change Flexslider to use dots instead of thumbnails
+add_filter( 'woocommerce_single_product_carousel_options', 'ud_update_woo_flexslider_options' );
+
+function ud_update_woo_flexslider_options( $options ) {
+
+    $options['controlNav'] = true;
+    return $options;
+}
+
+// Remove woocommerce breadcrumbs
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+
+// Remove product additional information
+add_filter( 'woocommerce_product_tabs', 'bbloomer_remove_product_tabs', 9999 );
+  
+function bbloomer_remove_product_tabs( $tabs ) {
+    unset( $tabs['additional_information'] ); 
+    return $tabs;
+}
+
+// Change voucher text
+
+add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_cart', 10, 3 );
+add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_cart', 10, 3 );
+// add_filter('woocommerce_coupon_error', 'rename_coupon_label', 10, 3);
+// add_filter('woocommerce_coupon_message', 'rename_coupon_label', 10, 3);
+// add_filter('woocommerce_cart_totals_coupon_label', 'rename_coupon_label',10, 1);
+// add_filter( 'woocommerce_checkout_coupon_message', 'woocommerce_rename_coupon_message_on_checkout' );
+
+
+function woocommerce_rename_coupon_field_on_cart( $translated_text, $text, $text_domain ) {
+	// bail if not modifying frontend woocommerce text
+	// if ( is_admin() || 'woocommerce' !== $text_domain ) {
+	// 	return $translated_text;
+	// }
+	// if ( 'Coupon:' === $text ) {
+	// 	$translated_text = 'Offer Code:';
+	// }
+
+	// if ('Coupon has been removed.' === $text){
+	// 	$translated_text = 'Offer code has been removed.';
+	// }
+
+	if ( 'Apply coupon' === $text ) {
+		$translated_text = '';
+	}
+
+	if ( 'Coupon code' === $text ) {
+		$translated_text = 'Wpisz kod kuponu';
+	} 
+
+	return $translated_text;
+}
+
+
+// rename the "Have a Coupon?" message on the checkout page
+// function woocommerce_rename_coupon_message_on_checkout() {
+// 	return 'Have an Offer Code?' . ' ' . __( 'Click here to enter your code', 'woocommerce' ) . '';
+// }
+
+
+// function rename_coupon_label($err, $err_code=null, $something=null){
+
+// 	$err = str_ireplace("Coupon","Offer Code ",$err);
+
+// 	return $err;
+// }
