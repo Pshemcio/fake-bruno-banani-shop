@@ -74,19 +74,19 @@
 
                 <ul class="site-navigation__icons">
                     <li class="site-navigation__icon">
-                        <a href="">
+                        <a href="/moje-konto">
                             <i class="fas fa-user"></i>
                             Konto
                         </a>
                     </li>
                     <li class="site-navigation__icon">
-                        <a href="">
+                        <a href="/newsletter">
                             <i class="far fa-envelope"></i>
                             Newsletter
                         </a>
                     </li>
                     <li class="site-navigation__icon">
-                        <a href="">
+                        <a href="/kontakt">
                             <i class="fas fa-phone"></i>
                             Kontakt
                         </a>

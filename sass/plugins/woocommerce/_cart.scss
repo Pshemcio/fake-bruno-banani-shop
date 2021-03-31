@@ -1,6 +1,18 @@
 .woocommerce-cart {
 
     .woocommerce {
+        margin-bottom: 30px;
+
+        button,
+        .checkout-button {
+            display: inline-block;
+            color: $color__background-body;
+            background-color: $color__link;
+            padding: 10px 20px;
+            border: 1px solid $color__link;
+            border-radius: 0;
+        }
+
         .woocommerce-cart-form {
             // display: none;
             background-color: #fff;
@@ -11,6 +23,7 @@
                 flex-wrap: wrap;
                 align-items: center;
                 padding: 0 10px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
                 .product {
                     &-remove {
@@ -52,11 +65,13 @@
                     &-quantity,
                     &-subtotal {
                         flex-basis: 100%;
-                        padding-left: 100px;
+                        margin-left: 30vw;
+                        line-height: 40px;
                     }
 
                     &-quantity {
-                        line-height: 40px;
+                        border-top: 1px solid rgba(0, 0, 0, 0.2);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                     }
                 }
             }
@@ -82,15 +97,41 @@
                     }
 
                     button {
-                        color: $color__background-body;
-                        background-color: $color__link;
-                        padding: 0 10px;
-                        border: 1px solid $color__link;
-
                         &::after {
                             content: '\f054';
                             font-family: FontAwesome;
                         }
+                    }
+                }
+            }
+        }
+
+        .cart_totals {
+            padding: 0 10px;
+
+            h2 {
+                margin: 10px 0;
+            }
+
+            .shop_table {
+                tr {
+                    display: block;
+                    margin: 10px 0;
+                }
+
+                .woocommerce-shipping-methods {
+                    padding-left: 25vw;
+
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+
+                .order-total {
+                    .amount {
+                        color: $color__text-screen;
                     }
                 }
             }

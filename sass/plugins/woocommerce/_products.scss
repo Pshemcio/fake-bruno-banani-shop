@@ -1,3 +1,14 @@
+.woocommerce-ordering {
+	margin-bottom: 15px;
+
+	.orderby {
+		background-color: $color__text-main;
+		color: $color__text-secondary;
+		padding: 5px 10px;
+		margin-bottom: 20px;
+	}
+}
+
 ul.products {
 	margin: 0;
 	padding: 0;
@@ -5,6 +16,7 @@ ul.products {
 	flex-wrap: wrap;
 
 	li.product {
+		position: relative;
 		flex-basis: 50%;
 		margin-bottom: 2em;
 		text-align: center;

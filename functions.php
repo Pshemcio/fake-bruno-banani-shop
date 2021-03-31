@@ -266,16 +266,11 @@ function woocommerce_rename_coupon_field_on_cart( $translated_text, $text, $text
 	return $translated_text;
 }
 
+add_filter('woocommerce_sale_flash', 'ds_change_sale_text');
 
-// rename the "Have a Coupon?" message on the checkout page
-// function woocommerce_rename_coupon_message_on_checkout() {
-// 	return 'Have an Offer Code?' . ' ' . __( 'Click here to enter your code', 'woocommerce' ) . '';
-// }
+function ds_change_sale_text() {
+return '<span class="onsale"><i class="fas fa-percentage"></i></span>';
+}
 
-
-// function rename_coupon_label($err, $err_code=null, $something=null){
-
-// 	$err = str_ireplace("Coupon","Offer Code ",$err);
-
-// 	return $err;
-// }
+// Remove the result count from WooCommerce
+remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );

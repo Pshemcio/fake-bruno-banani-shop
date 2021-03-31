@@ -164,6 +164,10 @@
 		width: 100%;
 		text-transform: uppercase;
 		overflow: hidden;
+
+		i {
+			margin-right: 5px;
+		}
 	}
 
 	.menu-item-has-children>a {

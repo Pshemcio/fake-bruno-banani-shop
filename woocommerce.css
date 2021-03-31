@@ -65,6 +65,17 @@ table.shop_table_responsive tr td.download-actions .button {
 /**
  * Products
  */
+.woocommerce-ordering {
+	margin-bottom: 15px;
+}
+
+.woocommerce-ordering .orderby {
+	background-color: #202020;
+	color: #eee;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+}
+
 ul.products {
 	margin: 0;
 	padding: 0;
@@ -73,6 +84,7 @@ ul.products {
 }
 
 ul.products li.product {
+	position: relative;
 	flex-basis: 50%;
 	margin-bottom: 2em;
 	text-align: center;
@@ -289,24 +301,80 @@ ul.products li.product .button {
 /**
  * Checkout
  */
-@media screen and (min-width: 768px) {
-	.col2-set .form-row-first {
-		float: left;
-		margin-right: 3.8%;
-	}
-	.col2-set .form-row-last {
-		float: right;
-		margin-right: 0;
-	}
-	.col2-set .form-row-first,
-	.col2-set .form-row-last {
-		width: 48.1%;
-	}
+.woocommerce-checkout .entry-content {
+	margin-top: 10px;
+}
+
+.woocommerce-checkout .checkout {
+	padding: 15px 0;
+}
+
+.woocommerce-checkout .checkout .form-row {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	margin: 15px 0;
+}
+
+.woocommerce-checkout .checkout .form-row input {
+	width: 95%;
+}
+
+.woocommerce-checkout .checkout .shop_table {
+	text-align: left;
+}
+
+.woocommerce-checkout .checkout .shop_table .cart_item {
+	line-height: 2em;
+}
+
+.woocommerce-checkout .checkout .woocommerce-shipping-totals {
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+}
+
+.woocommerce-checkout .checkout .woocommerce-shipping-totals ul {
+	padding: 0;
+}
+
+.woocommerce-checkout .checkout .woocommerce-shipping-totals ul .shipping_method {
+	margin-right: 10px;
+}
+
+.woocommerce-checkout .checkout .wc_payment_methods {
+	padding: 0;
+}
+
+.woocommerce-checkout .checkout .place-order {
+	margin-bottom: 0;
+}
+
+.woocommerce-checkout .checkout .place-order .button {
+	display: block;
+	background-color: #202020;
+	color: #eee;
+	padding: 15px 10px;
+	margin-bottom: 20px;
 }
 
 /**
  * Cart
  */
+.woocommerce-cart .woocommerce {
+	margin-bottom: 30px;
+}
+
+.woocommerce-cart .woocommerce button,
+.woocommerce-cart .woocommerce .checkout-button {
+	display: inline-block;
+	color: #fff;
+	background-color: #2b2929;
+	padding: 10px 20px;
+	border: 1px solid #2b2929;
+	border-radius: 0;
+}
+
 .woocommerce-cart .woocommerce .woocommerce-cart-form {
 	background-color: #fff;
 }
@@ -317,6 +385,7 @@ ul.products li.product .button {
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 0 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-remove {
@@ -356,11 +425,13 @@ ul.products li.product .button {
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-price, .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-quantity, .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-subtotal {
 	flex-basis: 100%;
-	padding-left: 100px;
+	margin-left: 30vw;
+	line-height: 40px;
 }
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-quantity {
-	line-height: 40px;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .actions {
@@ -385,16 +456,36 @@ ul.products li.product .button {
 	border-radius: 0;
 }
 
-.woocommerce-cart .woocommerce .woocommerce-cart-form .actions .coupon button {
-	color: #fff;
-	background-color: #2b2929;
-	padding: 0 10px;
-	border: 1px solid #2b2929;
-}
-
 .woocommerce-cart .woocommerce .woocommerce-cart-form .actions .coupon button::after {
 	content: '\f054';
 	font-family: FontAwesome;
+}
+
+.woocommerce-cart .woocommerce .cart_totals {
+	padding: 0 10px;
+}
+
+.woocommerce-cart .woocommerce .cart_totals h2 {
+	margin: 10px 0;
+}
+
+.woocommerce-cart .woocommerce .cart_totals .shop_table tr {
+	display: block;
+	margin: 10px 0;
+}
+
+.woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-methods {
+	padding-left: 25vw;
+}
+
+.woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-methods li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.woocommerce-cart .woocommerce .cart_totals .shop_table .order-total .amount {
+	color: #21759b;
 }
 
 /**
@@ -626,6 +717,20 @@ p.no-comments {
 	padding: 1em;
 	background-color: #3d9cd2;
 	z-index: 9999;
+}
+
+.onsale {
+	display: grid;
+	place-items: center;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	z-index: 2;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(128, 0, 128, 0.4);
+	color: #eee;
 }
 
 @media screen and (min-width: 48em) {
