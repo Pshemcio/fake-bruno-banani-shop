@@ -28,7 +28,7 @@
 		height: 1em;
 		cursor: ew-resize;
 		outline: none;
-		background: $color__link;
+		background: $color__text-main;
 		box-sizing: border-box;
 		margin-top: -0.25em;
 		opacity: 1;
@@ -48,7 +48,7 @@
 		z-index: 1;
 		display: block;
 		border: 0;
-		background: $color__link;
+		background: $color__text-main;
 	}
 
 	.price_slider_wrapper .ui-widget-content {
@@ -103,13 +103,8 @@
 			justify-content: space-between;
 
 			.button {
-				font-family: $font__sec;
-				color: $color__background-body;
-				background-color: $color__link;
-				font-weight: 400;
-				padding: 10px;
+				@include dark-button;
 			}
-
 		}
 	}
 }

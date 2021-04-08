@@ -390,7 +390,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #202020;
+	color: #2b2929;
 	font-family: Poppins, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -524,7 +524,7 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #2b2929;
+	color: #21759b;
 	text-decoration: none;
 }
 
@@ -675,7 +675,7 @@ textarea {
 
 .site-header__addon {
 	font-size: 20px;
-	color: #202020;
+	color: #2b2929;
 	background-color: transparent;
 	border: none;
 	padding: 2px;
@@ -781,7 +781,7 @@ textarea {
 
 .main-navigation a {
 	display: block;
-	color: #202020;
+	color: #2b2929;
 	font-weight: 500;
 	padding: 16px 0;
 	width: 100%;
@@ -825,7 +825,7 @@ textarea {
 	display: block;
 	height: 2px;
 	width: 70%;
-	background-color: #202020;
+	background-color: #2b2929;
 	transform: translate(-50%, -50%);
 	transform-origin: right;
 	transition: transform .4s;
@@ -1019,6 +1019,10 @@ textarea {
 	padding: 30px 0 10px;
 }
 
+.shop-section a {
+	color: #2b2929;
+}
+
 .shop-section__container {
 	padding: 0;
 }
@@ -1170,6 +1174,7 @@ textarea {
 .site-footer__container--inner a {
 	display: block;
 	padding: 2px 0;
+	color: #2b2929;
 }
 
 .site-footer__socials {

@@ -21,6 +21,10 @@ ul.products {
 		margin-bottom: 2em;
 		text-align: center;
 
+		a {
+			color: $color__text-main;
+		}
+
 		h2 {
 			margin: 5px 0 8px;
 			font-size: 16px;

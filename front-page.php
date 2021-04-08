@@ -75,7 +75,7 @@
         <div class="hero__container">
             <h2 class="hero__heading">Absolute Man</h2>
             <p class="hero__info">Wyzwól w sobie bestię</p>
-            <a href="produkt/mans-best-edt/" class="hero__button">Odkrywaj</a>
+            <a href="produkt/absolute-man/" class="hero__button">Odkrywaj</a>
         </div>
     </div>
 </section>

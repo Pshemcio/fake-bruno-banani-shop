@@ -93,7 +93,7 @@
 		padding: 0 10px;
 
 		h1 {
-			color: $color__link;
+			color: $color__text-main;
 		}
 
 		.reset_variations,
@@ -130,18 +130,21 @@
 		}
 
 		.related {
+			h2 {
+				color: $color__text-main;
+			}
+
 			&>h2 {
 				margin-bottom: 25px;
-				color: $color__link;
 			}
 		}
 
 		.woocommerce-Reviews-title {
-			color: $color__link;
+			color: $color__text-main;
 		}
 
 		strong {
-			color: $color__link;
+			color: $color__text-main;
 		}
 
 		.woocommerce-variation-price {
@@ -171,7 +174,7 @@
 
 				font-family: $font__sec;
 				color: $color__background-body;
-				background-color: $color__link;
+				background-color: $color__text-main;
 				font-weight: 400;
 				padding: 0 30px;
 			}
@@ -179,7 +182,7 @@
 
 		.submit {
 			background-color: $color__background-body;
-			color: $color__link;
+			color: $color__text-main;
 			font-weight: 400;
 			padding: 12px 30px;
 		}
@@ -187,7 +190,7 @@
 		.woocommerce-Tabs-panel {
 
 			&>h2 {
-				color: $color__link;
+				color: $color__text-main;
 			}
 
 			ul {

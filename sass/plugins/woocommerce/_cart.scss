@@ -5,12 +5,7 @@
 
         button,
         .checkout-button {
-            display: inline-block;
-            color: $color__background-body;
-            background-color: $color__link;
-            padding: 10px 20px;
-            border: 1px solid $color__link;
-            border-radius: 0;
+            @include dark-button;
         }
 
         .woocommerce-cart-form {
@@ -29,8 +24,12 @@
                     &-remove {
                         position: absolute;
                         top: 5%;
-                        right: 20px;
+                        right: 0;
                         font-size: 40px;
+
+                        a {
+                            color: $color__text-main;
+                        }
                     }
 
                     &-thumbnail {
@@ -54,10 +53,18 @@
                     }
 
                     &-name {
-                        flex-basis: 55%;
+                        flex-basis: 70%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding-left: 10px;
 
                         &::before {
                             content: '';
+                        }
+
+                        a {
+                            color: $color__text-main;
                         }
                     }
 
@@ -126,6 +133,13 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        font-size: 15px;
+                    }
+                }
+
+                .woocommerce-shipping-destination {
+                    strong {
+                        display: block;
                     }
                 }
 

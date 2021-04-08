@@ -46,7 +46,7 @@
     &__button {
         display: inline-block;
         background-color: $color__background-body;
-        color: $color__link;
+        color: $color__text-main;
         font-weight: 600;
         padding: 10px 40px;
     }
@@ -127,6 +127,10 @@
 
 .shop-section {
     padding: 30px 0 10px;
+
+    a {
+        color: $color__text-main;
+    }
 
     &__container {
         padding: 0;

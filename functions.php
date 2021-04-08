@@ -274,3 +274,19 @@ return '<span class="onsale"><i class="fas fa-percentage"></i></span>';
 
 // Remove the result count from WooCommerce
 remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
+
+/*
+ * Change number of related products output
+ */ 
+function woo_related_products_limit() {
+	global $product;
+	  
+	  $args['posts_per_page'] = 6;
+	  return $args;
+  }
+  add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
+	function jk_related_products_args( $args ) {
+	  $args['posts_per_page'] = 4; // 4 related products
+	  $args['columns'] = 2; // arranged in 2 columns
+	  return $args;
+  }
