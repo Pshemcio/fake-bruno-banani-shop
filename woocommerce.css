@@ -122,7 +122,7 @@ ul.products li.product .button {
 
 .single-product div.product {
 	position: relative;
-	padding: 0 10px;
+	padding: 0 12px;
 }
 
 .single-product div.product h1 {
@@ -185,8 +185,11 @@ ul.products li.product .button {
 	font-weight: 600;
 }
 
+.single-product div.product .variations tr,
+.single-product div.product .woocommerce-variation-price,
 .single-product div.product .woocommerce-variation-add-to-cart {
 	display: flex;
+	justify-content: space-between;
 }
 
 .single-product div.product .woocommerce-variation-add-to-cart .input-text {
@@ -195,11 +198,12 @@ ul.products li.product .button {
 
 .single-product div.product .woocommerce-variation-add-to-cart .single_add_to_cart_button {
 	margin-left: 20px;
-	font-family: Montserrat, Poppins, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	display: inline-block;
 	color: #fff;
 	background-color: #2b2929;
-	font-weight: 400;
-	padding: 0 30px;
+	padding: 10px;
+	border: 1px solid #2b2929;
+	border-radius: 0;
 }
 
 .single-product div.product .submit {
@@ -353,6 +357,7 @@ ul.products li.product .button {
 
 .woocommerce-checkout .entry-content {
 	margin-top: 10px;
+	padding: 0 10px;
 }
 
 .woocommerce-checkout .checkout {
@@ -457,6 +462,7 @@ ul.products li.product .button {
  */
 .woocommerce-cart .woocommerce {
 	margin-bottom: 30px;
+	padding: 0 10px;
 }
 
 .woocommerce-cart .woocommerce button,
@@ -478,7 +484,6 @@ ul.products li.product .button {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	padding: 0 10px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -544,7 +549,6 @@ ul.products li.product .button {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	padding: 0 10px;
 }
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .actions .coupon {
@@ -565,10 +569,6 @@ ul.products li.product .button {
 .woocommerce-cart .woocommerce .woocommerce-cart-form .actions .coupon button::after {
 	content: '\f054';
 	font-family: FontAwesome;
-}
-
-.woocommerce-cart .woocommerce .cart_totals {
-	padding: 0 10px;
 }
 
 .woocommerce-cart .woocommerce .cart_totals h2 {
@@ -976,5 +976,32 @@ p.no-comments {
 /**
  * My account site
  */
+.woocommerce-account .entry-content {
+	padding: 0 10px;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	margin: 10px 20px;
+	padding: 0;
+}
+
+.woocommerce-account .woocommerce-EditAccountForm .woocommerce-form-row {
+	display: flex;
+	flex-direction: column;
+}
+
+.woocommerce-account .woocommerce-EditAccountForm .woocommerce-Button {
+	display: inline-block;
+	color: #fff;
+	background-color: #2b2929;
+	padding: 10px;
+	border: 1px solid #2b2929;
+	border-radius: 0;
+	padding: 10px 20px;
+}
+
+.woocommerce-account .password-input input {
+	width: 100%;
+}
 
 /*# sourceMappingURL=woocommerce.css.map */

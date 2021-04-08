@@ -2,6 +2,7 @@
 
     .woocommerce {
         margin-bottom: 30px;
+        padding: 0 10px;
 
         button,
         .checkout-button {
@@ -17,7 +18,6 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                padding: 0 10px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
                 .product {
@@ -87,7 +87,6 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-                padding: 0 10px;
 
                 .coupon {
                     flex-basis: 100%;
@@ -114,8 +113,6 @@
         }
 
         .cart_totals {
-            padding: 0 10px;
-
             h2 {
                 margin: 10px 0;
             }
