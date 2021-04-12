@@ -10,6 +10,15 @@
         }
     }
 
+    .form-row {
+
+        .woocommerce-Button,
+        .woocommerce-button {
+            @include dark-button;
+            display: block;
+        }
+    }
+
     .woocommerce-EditAccountForm {
         .woocommerce-form-row {
             display: flex;
@@ -22,11 +31,61 @@
         }
     }
 
+    .woocommerce-Input {
+        width: 100%;
+    }
+
     .password-input {
-        input {
-            width: 100%;
+        display: block;
+        position: relative;
+
+        .show-password-input {
+            display: block;
+            position: absolute;
+            top: 4px;
+            right: 6px;
+            width: 20px;
+            height: 100%;
+
+            &.display-password {
+                right: 7px;
+
+                &::before {
+                    display: block;
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f070";
+                    padding-right: 6px;
+                }
+            }
+
+            &::before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f06e";
+            }
         }
     }
 
+    .woocommerce-order-details {
+        font-size: 14px;
 
+        th,
+        .woocommerce-table__product-name {
+            text-align: left;
+        }
+
+        td,
+        .woocommerce-table__product-table {
+            text-align: right;
+        }
+    }
+
+    .woocommerce-address-fields {
+        input {
+            display: block;
+        }
+
+        .button {
+            @include dark-button;
+        }
+    }
 }

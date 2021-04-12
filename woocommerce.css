@@ -985,6 +985,17 @@ p.no-comments {
 	padding: 0;
 }
 
+.woocommerce-account .form-row .woocommerce-Button,
+.woocommerce-account .form-row .woocommerce-button {
+	display: inline-block;
+	color: #fff;
+	background-color: #2b2929;
+	padding: 10px;
+	border: 1px solid #2b2929;
+	border-radius: 0;
+	display: block;
+}
+
 .woocommerce-account .woocommerce-EditAccountForm .woocommerce-form-row {
 	display: flex;
 	flex-direction: column;
@@ -1000,8 +1011,65 @@ p.no-comments {
 	padding: 10px 20px;
 }
 
-.woocommerce-account .password-input input {
+.woocommerce-account .woocommerce-Input {
 	width: 100%;
+}
+
+.woocommerce-account .password-input {
+	display: block;
+	position: relative;
+}
+
+.woocommerce-account .password-input .show-password-input {
+	display: block;
+	position: absolute;
+	top: 4px;
+	right: 6px;
+	width: 20px;
+	height: 100%;
+}
+
+.woocommerce-account .password-input .show-password-input.display-password {
+	right: 7px;
+}
+
+.woocommerce-account .password-input .show-password-input.display-password::before {
+	display: block;
+	font-family: "Font Awesome 5 Free";
+	content: "\f070";
+	padding-right: 6px;
+}
+
+.woocommerce-account .password-input .show-password-input::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f06e";
+}
+
+.woocommerce-account .woocommerce-order-details {
+	font-size: 14px;
+}
+
+.woocommerce-account .woocommerce-order-details th,
+.woocommerce-account .woocommerce-order-details .woocommerce-table__product-name {
+	text-align: left;
+}
+
+.woocommerce-account .woocommerce-order-details td,
+.woocommerce-account .woocommerce-order-details .woocommerce-table__product-table {
+	text-align: right;
+}
+
+.woocommerce-account .woocommerce-address-fields input {
+	display: block;
+}
+
+.woocommerce-account .woocommerce-address-fields .button {
+	display: inline-block;
+	color: #fff;
+	background-color: #2b2929;
+	padding: 10px;
+	border: 1px solid #2b2929;
+	border-radius: 0;
 }
 
 /*# sourceMappingURL=woocommerce.css.map */
