@@ -55,7 +55,7 @@
 .front-categories {
     width: 100%;
     text-align: center;
-    padding: 30px 20px 20px;
+    padding: 30px $padding__main 20px;
     background-color: $color__background-body--tertiary;
 
     &__container {
@@ -68,6 +68,11 @@
         background-position: center;
         color: $color__text-secondary;
         text-transform: uppercase;
+
+        @include breakpoint(xs) {
+            height: 90vh;
+            margin: 30px;
+        }
 
         &--men {
             background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/men-cat.jpg");
@@ -109,9 +114,13 @@
 
 .front-about {
     background-color: $color__background-body--secondary;
-    padding: 30px 20px;
+    padding: 30px $padding__main;
     color: $color__text-secondary;
     text-align: center;
+
+    @include breakpoint(xs) {
+        padding: 30px $padding__main*4;
+    }
 
     &__heading {
         margin-top: 0;
@@ -126,7 +135,11 @@
 }
 
 .shop-section {
-    padding: 30px 0 10px;
+    padding: 30px $padding__main/2 10px;
+
+    @include breakpoint(xs) {
+        padding: 30px $padding__main*3 10px;
+    }
 
     a {
         color: $color__text-main;

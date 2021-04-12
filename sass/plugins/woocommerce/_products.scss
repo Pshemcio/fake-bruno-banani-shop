@@ -1,17 +1,18 @@
 .woocommerce-ordering {
-	margin-bottom: 15px;
+	// margin-bottom: 15px;
+	margin: 4px 0 20px $padding__main/2;
 
 	.orderby {
 		background-color: $color__text-main;
 		color: $color__text-secondary;
 		padding: 5px 10px;
-		margin-bottom: 20px;
+		// margin: 4px 0 20px 8px;
 	}
 }
 
 ul.products {
 	margin: 0;
-	padding: 0;
+	padding: 0 $padding__main/2;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -27,13 +28,16 @@ ul.products {
 
 		h2 {
 			margin: 5px 0 8px;
-			font-size: 16px;
+			font-size: 15px;
 			font-weight: 400;
 		}
 
 		img {
 			display: block;
 			margin: 0 auto;
+			width: 145px;
+			height: 180px;
+			object-fit: contain;
 		}
 
 		.price {
@@ -45,45 +49,3 @@ ul.products {
 		}
 	}
 }
-
-// @media screen and (min-width: 48em) {
-
-// 	ul.products {
-
-// 		li.product {
-
-// 			@include column-width(3);
-// 			float: left;
-// 			margin-right: $columns__margin;
-
-// 			&.first {
-// 				clear: both;
-// 			}
-
-// 			&.last {
-// 				margin-right: 0;
-// 			}
-// 		}
-// 	}
-
-// 	ul.products.columns-1 {
-
-// 		li.product {
-// 			float: none;
-// 			width: 100%;
-// 		}
-
-// 	}
-
-// 	@for $i from 2 through 6 {
-
-// 		ul.products.columns-#{$i} {
-
-// 			li.product {
-
-// 				@include column-width($i);
-// 			}
-
-// 		}
-// 	}
-// }

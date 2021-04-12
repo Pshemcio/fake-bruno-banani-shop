@@ -5,8 +5,14 @@
 		position: relative;
 		padding: 0 12px;
 
+		@include breakpoint(xs) {
+			padding: 0 5vw;
+			font-size: 14px;
+		}
+
 		h1 {
 			color: $color__text-main;
+			margin-top: 2vh;
 		}
 
 		.reset_variations,
@@ -137,6 +143,10 @@
 					object-fit: contain;
 					display: block;
 					margin: 0 auto;
+
+					@include breakpoint(xs) {
+						height: 75vh;
+					}
 				}
 			}
 

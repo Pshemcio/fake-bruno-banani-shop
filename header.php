@@ -80,9 +80,9 @@
                         </a>
                     </li>
                     <li class="site-navigation__icon">
-                        <a href="/newsletter">
-                            <i class="far fa-envelope"></i>
-                            Newsletter
+                        <a href="/koszyk">
+                            <i class="fas fa-shopping-cart"></i>
+                            Koszyk
                         </a>
                     </li>
                     <li class="site-navigation__icon">

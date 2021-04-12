@@ -3,6 +3,10 @@
     background-color: $color__background-body--secondary;
     padding-bottom: 20px;
 
+    @include breakpoint(xs) {
+        padding: 20px $padding__main*3;
+    }
+
     &__heading,
     &__paragraph {
         margin: 0;

@@ -104,6 +104,13 @@
 
 			.button {
 				@include dark-button;
+				flex-basis: 48%;
+				text-align: center;
+				padding: 10px 0;
+
+				&:first-of-type {
+					margin-right: 10px;
+				}
 			}
 		}
 	}

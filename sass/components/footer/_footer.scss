@@ -11,6 +11,10 @@
         background-image: url(images/newsletter_800x800@2x.jpg);
         background-size: cover;
         background-position: right;
+
+        @include breakpoint(xs) {
+            height: 100vh;
+        }
     }
 
     &__container {

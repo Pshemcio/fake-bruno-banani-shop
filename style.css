@@ -635,7 +635,7 @@ textarea {
 	left: 0;
 	right: 0;
 	width: 100%;
-	height: 9vh;
+	min-height: 9vh;
 	z-index: 10;
 	display: flex;
 	justify-content: space-between;
@@ -661,7 +661,7 @@ textarea {
 	top: 100%;
 	left: 0;
 	right: 0;
-	height: 91vh;
+	min-height: 91vh;
 	z-index: -3;
 	opacity: 0;
 	background-color: rgba(14, 18, 36, 0.2);
@@ -687,7 +687,7 @@ textarea {
 }
 
 .site-header .site-branding {
-	height: 60%;
+	height: 23px;
 	flex-grow: 1;
 	background-image: url(images/logo/bb_logo_low.svg);
 	background-size: contain;
@@ -754,6 +754,12 @@ textarea {
 	transition: transform 1.1s 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
+@media (min-width: 512px) {
+	.main-navigation {
+		right: 30vw;
+	}
+}
+
 .main-navigation .site-navigation__icons,
 .main-navigation .menu-main-navigation-container {
 	position: relative;
@@ -765,13 +771,14 @@ textarea {
 
 .main-navigation .menu-main-navigation-container {
 	flex-grow: 1;
-	padding-bottom: 30px;
+	padding: 15px 0 30px;
 }
 
 .main-navigation .site-navigation__icons {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	padding-bottom: 10vh;
 }
 
 .main-navigation ul {
@@ -852,6 +859,12 @@ textarea {
 	background-color: #fff;
 	transform: translateX(100vw);
 	transition: transform 1.1s cubic-bezier(1, 0, 0, 1);
+}
+
+@media (min-width: 512px) {
+	.widget_shopping_cart_content {
+		left: 30vw;
+	}
 }
 
 .search-bar {
@@ -961,6 +974,13 @@ textarea {
 	text-transform: uppercase;
 }
 
+@media (min-width: 512px) {
+	.front-categories__container {
+		height: 90vh;
+		margin: 30px;
+	}
+}
+
 .front-categories__container--men {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, black), url("images/men-cat.jpg");
 }
@@ -1004,6 +1024,12 @@ textarea {
 	text-align: center;
 }
 
+@media (min-width: 512px) {
+	.front-about {
+		padding: 30px 80px;
+	}
+}
+
 .front-about__heading {
 	margin-top: 0;
 	text-transform: uppercase;
@@ -1016,7 +1042,13 @@ textarea {
 }
 
 .shop-section {
-	padding: 30px 0 10px;
+	padding: 30px 10px 10px;
+}
+
+@media (min-width: 512px) {
+	.shop-section {
+		padding: 30px 60px 10px;
+	}
 }
 
 .shop-section a {
@@ -1165,6 +1197,12 @@ textarea {
 	background-position: right;
 }
 
+@media (min-width: 512px) {
+	.site-footer::before {
+		height: 100vh;
+	}
+}
+
 .site-footer__container--inner {
 	margin: 20px 0;
 	padding: 0;
@@ -1197,6 +1235,12 @@ textarea {
 	color: #eee;
 	background-color: #000;
 	padding-bottom: 20px;
+}
+
+@media (min-width: 512px) {
+	.newsletter {
+		padding: 20px 60px;
+	}
 }
 
 .newsletter__heading, .newsletter__paragraph {

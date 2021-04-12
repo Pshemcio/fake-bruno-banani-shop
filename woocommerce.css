@@ -66,19 +66,18 @@ table.shop_table_responsive tr td.download-actions .button {
  * Products
  */
 .woocommerce-ordering {
-	margin-bottom: 15px;
+	margin: 4px 0 20px 10px;
 }
 
 .woocommerce-ordering .orderby {
 	background-color: #2b2929;
 	color: #eee;
 	padding: 5px 10px;
-	margin-bottom: 20px;
 }
 
 ul.products {
 	margin: 0;
-	padding: 0;
+	padding: 0 10px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -96,13 +95,16 @@ ul.products li.product a {
 
 ul.products li.product h2 {
 	margin: 5px 0 8px;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 400;
 }
 
 ul.products li.product img {
 	display: block;
 	margin: 0 auto;
+	width: 145px;
+	height: 180px;
+	object-fit: contain;
 }
 
 ul.products li.product .price {
@@ -125,8 +127,16 @@ ul.products li.product .button {
 	padding: 0 12px;
 }
 
+@media (min-width: 512px) {
+	.single-product div.product {
+		padding: 0 5vw;
+		font-size: 14px;
+	}
+}
+
 .single-product div.product h1 {
 	color: #2b2929;
+	margin-top: 2vh;
 }
 
 .single-product div.product .reset_variations,
@@ -245,6 +255,12 @@ ul.products li.product .button {
 	object-fit: contain;
 	display: block;
 	margin: 0 auto;
+}
+
+@media (min-width: 512px) {
+	.single-product div.product .woocommerce-product-gallery__image img {
+		height: 75vh;
+	}
 }
 
 .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
@@ -455,6 +471,10 @@ ul.products li.product .button {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order-overview {
+	padding-left: 0;
 }
 
 /**
@@ -971,6 +991,13 @@ p.no-comments {
 	padding: 10px;
 	border: 1px solid #2b2929;
 	border-radius: 0;
+	flex-basis: 48%;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.widget_shopping_cart_content .woocommerce-mini-cart__buttons .button:first-of-type {
+	margin-right: 10px;
 }
 
 /**
@@ -1043,6 +1070,11 @@ p.no-comments {
 .woocommerce-account .password-input .show-password-input::before {
 	font-family: "Font Awesome 5 Free";
 	content: "\f06e";
+}
+
+.woocommerce-account .woocommerce-orders-table__row {
+	display: block;
+	margin-top: 20px;
 }
 
 .woocommerce-account .woocommerce-order-details {

@@ -154,4 +154,10 @@
 			}
 		}
 	}
+
+	&.woocommerce-order-received {
+		.woocommerce-order-overview {
+			padding-left: 0;
+		}
+	}
 }
