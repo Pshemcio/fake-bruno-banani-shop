@@ -8,6 +8,17 @@
 			font-size: 14px;
 		}
 
+		@include breakpoint(md) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@include breakpoint(xl) {
+			padding: 0;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
 		h1 {
 			color: $color__text-main;
 			margin-top: 2vh;
@@ -19,29 +30,35 @@
 			display: none !important;
 		}
 
-		.wc-tabs {
-			li {
-				&.active {
-					a::after {
-						content: "\f078";
-					}
-				}
+		.woocommerce-tabs {
+			@include breakpoint(md) {
+				flex-basis: 100%;
 			}
 
-			a {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
+			.wc-tabs {
+				li {
+					&.active {
+						a::after {
+							content: "\f078";
+						}
+					}
+				}
 
-				&::after {
-					font-family: "Font Awesome 5 Free";
-					content: "\f054";
-					display: inline-block;
-					padding-right: 3px;
-					vertical-align: middle;
-					font-weight: 900;
-					margin-right: 10px;
-					color: $color__text-screen;
+				a {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					&::after {
+						font-family: "Font Awesome 5 Free";
+						content: "\f054";
+						display: inline-block;
+						padding-right: 3px;
+						vertical-align: middle;
+						font-weight: 900;
+						margin-right: 10px;
+						color: $color__text-screen;
+					}
 				}
 			}
 		}
@@ -51,16 +68,16 @@
 				width: 80%;
 			}
 
-			@include breakpoint(md) {
-				width: 40%;
-			}
-
 			@include breakpointPortrait(xs) {
 				width: 45%;
 			}
 		}
 
 		.related {
+			@include breakpoint(md) {
+				flex-basis: 100%;
+			}
+
 			h2 {
 				color: $color__text-main;
 			}
@@ -85,7 +102,7 @@
 			}
 
 			span {
-				font-weight: 500;
+				font-weight: 700;
 			}
 		}
 
@@ -100,8 +117,19 @@
 			justify-content: space-between;
 		}
 
+		.variations tr,
+		.woocommerce-variation-price {
+			@include breakpoint(md) {
+				flex-direction: column;
+			}
+		}
+
 
 		.woocommerce-variation-add-to-cart {
+			@include breakpoint(md) {
+				justify-content: flex-start;
+			}
+
 			.input-text {
 				padding: 6px;
 			}
@@ -110,6 +138,8 @@
 				margin-left: 20px;
 
 				@include dark-button;
+
+
 			}
 		}
 
@@ -147,6 +177,10 @@
 		.woocommerce-product-gallery {
 			position: relative;
 
+			@include breakpoint(md) {
+				flex-basis: 48%;
+			}
+
 			&__image {
 				height: 100%;
 
@@ -158,6 +192,10 @@
 
 					@include breakpoint(xs) {
 						height: 60vh;
+					}
+
+					@include breakpoint(md) {
+						height: 40vh;
 					}
 
 					@include breakpointPortrait(xs) {
@@ -215,6 +253,10 @@
 					}
 				}
 			}
+		}
+
+		.entry-summary {
+			flex-basis: 50%;
 		}
 	}
 }

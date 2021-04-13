@@ -126,4 +126,18 @@
 		width: 50%;
 		margin-left: auto;
 	}
+
+	@include breakpoint(lg) {
+		width: 30%;
+	}
+
+	.aws-search-form {
+		.aws-form-btn {
+			background-color: $color__background-body--secondary;
+
+			svg {
+				color: $color__text-secondary;
+			}
+		}
+	}
 }

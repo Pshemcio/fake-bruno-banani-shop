@@ -464,6 +464,7 @@ big {
 body {
 	background: #fff;
 	padding-top: 10vh;
+	width: 100%;
 	overflow-y: scroll;
 }
 
@@ -911,7 +912,7 @@ textarea {
 	top: 100%;
 	left: 0;
 	right: 0;
-	transform: translateY(-100%);
+	transform: translateY(-110%);
 	z-index: -2;
 	transition: transform 1s cubic-bezier(1, 0, 0, 1);
 }
@@ -931,6 +932,14 @@ textarea {
 	.post h1,
 	.page h1 {
 		margin: 25px 0 10px 10vw;
+	}
+}
+
+@media (min-width: 1366px) {
+	.post h1,
+	.page h1 {
+		max-width: 1200px;
+		margin: 25px auto;
 	}
 }
 
@@ -962,6 +971,13 @@ textarea {
 	padding-bottom: 18vh;
 	background-size: cover;
 	background-position: center;
+}
+
+@media (min-width: 512px) and (orientation: portrait) {
+	.hero__wrapper {
+		min-height: 70vh;
+		background-position: top;
+	}
 }
 
 .hero__wrapper--mans-best {
@@ -1014,6 +1030,11 @@ textarea {
 	background-color: #f7f7f7;
 }
 
+.front-categories__wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 @media (min-width: 992px) {
 	.front-categories__wrapper {
 		display: flex;
@@ -1053,6 +1074,12 @@ textarea {
 	.front-categories__container {
 		height: 50vh;
 		background-position: top;
+	}
+}
+
+@media (min-width: 992px) and (orientation: portrait) {
+	.front-categories__container {
+		height: 35vh;
 	}
 }
 
@@ -1121,6 +1148,11 @@ textarea {
 	display: block;
 	font-weight: 300;
 	font-size: 16px;
+}
+
+.front-about__paragraph {
+	max-width: 800px;
+	margin: 15px auto;
 }
 
 .shop-section {
@@ -1375,7 +1407,7 @@ textarea {
 	color: #eee;
 	background-color: #000;
 	padding-bottom: 20px;
-	width: 100vw;
+	width: 100%;
 }
 
 @media (min-width: 512px) {
@@ -1387,6 +1419,12 @@ textarea {
 @media (min-width: 992px) {
 	.newsletter {
 		height: 50vh;
+	}
+}
+
+@media (min-width: 992px) and (orientation: portrait) {
+	.newsletter {
+		height: 29vh;
 	}
 }
 
@@ -1414,13 +1452,8 @@ textarea {
 
 .newsletter__heading {
 	font-size: 2.5em;
+	font-weight: 300;
 	padding-top: 15px;
-}
-
-@media (min-width: 992px) {
-	.newsletter__heading {
-		font-weight: 300;
-	}
 }
 
 .newsletter__paragraph {
@@ -1431,6 +1464,10 @@ textarea {
 	.newsletter__paragraph {
 		padding: 0;
 	}
+}
+
+.newsletter .tnp-subscription {
+	margin: 15px 0;
 }
 
 .newsletter .tnp-subscription form {

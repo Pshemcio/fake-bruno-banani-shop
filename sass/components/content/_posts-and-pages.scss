@@ -10,6 +10,11 @@
 		@include breakpoint(xs) {
 			margin: 25px 0 10px 10vw;
 		}
+
+		@include breakpoint(xl) {
+			max-width: 1200px;
+			margin: 25px auto;
+		}
 	}
 }
 

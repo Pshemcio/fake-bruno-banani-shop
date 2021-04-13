@@ -88,7 +88,6 @@ const handleNavButtonClick = (className) => {
 
 const handleNavSubmenu = (e) => {
     if (e.target.classList.contains('menu-item-has-children')) {
-        console.log(e.target);
         e.target.querySelector('.sub-menu').classList.toggle('show');
     }
 };

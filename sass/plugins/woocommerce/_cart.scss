@@ -1,11 +1,16 @@
 .woocommerce-cart {
 
     .woocommerce {
-        margin-bottom: 30px;
+        margin: 0 auto 30px;
         padding: 0 10px;
+        max-width: 1200px;
 
         @include breakpoint(xs) {
             padding: $padding__landscape;
+        }
+
+        @include breakpoint(xl) {
+            padding: 0;
         }
 
         button,
@@ -142,6 +147,10 @@
                     background-image: url(images/men-fragrance.jpg);
                     background-size: cover;
                     background-position-x: center;
+
+                    @include breakpoint(lg) {
+                        width: 50%;
+                    }
                 }
             }
 
@@ -150,8 +159,16 @@
                     width: 50%;
                 }
 
+                @include breakpoint(lg) {
+                    width: 40%;
+                }
+
                 @include breakpointPortrait(xs) {
-                    width: 60%;
+                    width: 65%;
+                }
+
+                @include breakpointPortrait(md) {
+                    width: 40%;
                 }
 
                 tr {
@@ -160,10 +177,18 @@
                 }
 
                 .woocommerce-shipping-methods {
-                    padding-left: 25vw;
+                    padding-left: 30vw;
 
                     @include breakpoint(xs) {
                         padding-left: 50%;
+                    }
+
+                    @include breakpoint(md) {
+                        padding-left: 30%;
+                    }
+
+                    @include breakpoint(lg) {
+                        padding-left: 40%;
                     }
 
                     li {

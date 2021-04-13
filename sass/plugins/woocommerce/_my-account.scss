@@ -1,9 +1,15 @@
 .woocommerce-account {
     .entry-content {
         padding: 0 10px;
+        margin: 0 auto;
+        max-width: 1200px;
 
         @include breakpoint(xs) {
             padding: $padding__landscape;
+        }
+
+        @include breakpoint(xl) {
+            padding: 0;
         }
 
         .u-columns {
@@ -149,6 +155,10 @@
         td,
         .woocommerce-table__product-table {
             text-align: right;
+
+            @include breakpoint(md) {
+                text-align: left;
+            }
         }
     }
 
@@ -174,7 +184,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                width: 100vw;
+                width: 100%;
             }
 
             p {

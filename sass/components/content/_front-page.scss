@@ -13,6 +13,12 @@
         background-size: cover;
         background-position: center;
 
+        @include breakpointPortrait(xs) {
+            min-height: 70vh;
+            background-position: top;
+
+        }
+
         &--mans-best {
             background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/mans-best.jpg");
 
@@ -63,6 +69,9 @@
     background-color: $color__background-body--tertiary;
 
     &__wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+
         @include breakpoint(md) {
             display: flex;
             justify-content: space-between;
@@ -95,6 +104,10 @@
         @include breakpointPortrait(xs) {
             height: 50vh;
             background-position: top;
+        }
+
+        @include breakpointPortrait(md) {
+            height: 35vh;
         }
 
         &--men {
@@ -146,6 +159,7 @@
     color: $color__text-secondary;
     text-align: center;
 
+
     @include breakpoint(xs) {
         padding: 30px 15vw;
     }
@@ -159,6 +173,11 @@
             font-weight: 300;
             font-size: 16px;
         }
+    }
+
+    &__paragraph {
+        max-width: 800px;
+        margin: 15px auto;
     }
 }
 

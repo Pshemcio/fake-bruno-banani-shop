@@ -46,11 +46,17 @@
 	}
 
 	.entry-content {
-		margin-top: 10px;
+		// margin-top: 10px;
 		padding: 0 10px;
+		max-width: 1200px;
+		margin: 10px auto 0;
 
 		@include breakpoint(xs) {
 			padding: $padding__landscape;
+		}
+
+		@include breakpoint(xl) {
+			padding: 0;
 		}
 	}
 
@@ -60,11 +66,19 @@
 		.woocommerce-additional-fields__field-wrapper {
 			.input-text {
 				min-height: 30vh;
+
+				@include breakpoint(md) {
+					min-height: 120px;
+				}
 			}
 		}
 
 		.shop_table {
 			text-align: left;
+
+			@include breakpoint(md) {
+				width: 45%;
+			}
 
 			.cart_item {
 				line-height: 2em;
@@ -119,6 +133,11 @@
 				@include breakpoint(xs) {
 					width: 50%;
 				}
+
+				@include breakpoint(md) {
+					width: auto;
+					padding: 15px 30px;
+				}
 			}
 		}
 	}
@@ -172,6 +191,17 @@
 	&.woocommerce-order-received {
 		.woocommerce-order-overview {
 			padding-left: 0;
+		}
+	}
+
+	.col2-set {
+		@include breakpoint(md) {
+			display: flex;
+			justify-content: space-between;
+
+			&>div {
+				flex-basis: 48%;
+			}
 		}
 	}
 }

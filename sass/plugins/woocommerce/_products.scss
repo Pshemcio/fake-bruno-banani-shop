@@ -5,6 +5,11 @@
 		margin: 4px 0 20px 10vw;
 	}
 
+	@include breakpoint(xl) {
+		max-width: 1200px;
+		margin: 25px auto;
+	}
+
 	.orderby {
 		background-color: $color__text-main;
 		color: $color__text-secondary;
@@ -15,10 +20,13 @@
 }
 
 ul.products {
-	margin: 0;
+	max-width: 1200px;
+	margin: 0 auto;
 	padding: 0 $padding__main/2;
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
 
 	@include breakpoint(xs) {
 		padding: 0;
