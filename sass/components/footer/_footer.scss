@@ -1,7 +1,6 @@
 .site-footer {
     background-image: url(images/footer_bg.jpg);
     background-size: cover;
-    background-position: center;
     padding-bottom: 5vh;
 
     &::before {
@@ -13,7 +12,12 @@
         background-position: right;
 
         @include breakpoint(xs) {
-            height: 100vh;
+            height: 110vh;
+            background-position: top;
+        }
+
+        @include breakpointPortrait(xs) {
+            height: 50vh;
         }
     }
 

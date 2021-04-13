@@ -1,6 +1,10 @@
 .woocommerce-account {
     .entry-content {
         padding: 0 10px;
+
+        @include breakpoint(xs) {
+            padding: $padding__landscape;
+        }
     }
 
     .woocommerce-MyAccount-navigation {

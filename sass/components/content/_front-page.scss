@@ -15,6 +15,10 @@
 
         &--mans-best {
             background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/mans-best.jpg");
+
+            @include breakpoint(xs) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.15) 1%, rgba(0, 0, 0, 1)), url("images/mans-best.jpg");
+            }
         }
 
         &--womans-best {
@@ -74,6 +78,11 @@
             margin: 30px;
         }
 
+        @include breakpointPortrait(xs) {
+            height: 50vh;
+            background-position: top;
+        }
+
         &--men {
             background-image: linear-gradient(rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 1)), url("images/men-cat.jpg");
         }
@@ -119,7 +128,7 @@
     text-align: center;
 
     @include breakpoint(xs) {
-        padding: 30px $padding__main*4;
+        padding: 30px 15vw;
     }
 
     &__heading {
@@ -138,7 +147,7 @@
     padding: 30px $padding__main/2 10px;
 
     @include breakpoint(xs) {
-        padding: 30px $padding__main*3 10px;
+        padding: 30px 10vw 10px;
     }
 
     a {

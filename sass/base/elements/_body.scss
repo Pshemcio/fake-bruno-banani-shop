@@ -1,4 +1,9 @@
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 	padding-top: 10vh;
+
+	@include breakpointPortrait(xs) {
+		padding-top: 6vh;
+	}
+
 }

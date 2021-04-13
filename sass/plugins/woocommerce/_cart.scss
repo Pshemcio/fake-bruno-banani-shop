@@ -4,9 +4,17 @@
         margin-bottom: 30px;
         padding: 0 10px;
 
+        @include breakpoint(xs) {
+            padding: $padding__landscape;
+        }
+
         button,
         .checkout-button {
             @include dark-button;
+
+            @include breakpoint(xs) {
+                padding: 13px 20px;
+            }
         }
 
         .woocommerce-cart-form {
@@ -125,6 +133,10 @@
 
                 .woocommerce-shipping-methods {
                     padding-left: 25vw;
+
+                    @include breakpoint(xs) {
+                        padding-left: 40vw;
+                    }
 
                     li {
                         display: flex;

@@ -1,12 +1,10 @@
 .single-product {
-	padding-top: 10vh;
-
 	div.product {
 		position: relative;
 		padding: 0 12px;
 
 		@include breakpoint(xs) {
-			padding: 0 5vw;
+			padding: $padding__landscape;
 			font-size: 14px;
 		}
 
@@ -45,6 +43,12 @@
 					margin-right: 10px;
 					color: $color__text-screen;
 				}
+			}
+		}
+
+		.variations_form {
+			@include breakpoint(xs) {
+				width: 80%;
 			}
 		}
 
@@ -145,7 +149,7 @@
 					margin: 0 auto;
 
 					@include breakpoint(xs) {
-						height: 75vh;
+						height: 60vh;
 					}
 				}
 			}

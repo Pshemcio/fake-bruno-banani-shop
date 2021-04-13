@@ -12,6 +12,10 @@
 	align-items: center;
 	padding: 10px 20px;
 
+	@include breakpointPortrait(xs) {
+		min-height: 6vh;
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
