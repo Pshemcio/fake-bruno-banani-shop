@@ -2,6 +2,7 @@
     color: $color__text-secondary;
     background-color: $color__background-body--secondary;
     padding-bottom: 20px;
+    width: 100vw;
 
     @include breakpoint(xs) {
         padding: 20px $padding__main*3;

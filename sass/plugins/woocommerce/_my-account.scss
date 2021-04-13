@@ -5,6 +5,22 @@
         @include breakpoint(xs) {
             padding: $padding__landscape;
         }
+
+        .u-columns {
+            @include breakpoint(md) {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                margin-bottom: 50px;
+            }
+
+            .u-column1,
+            .u-column2 {
+                @include breakpoint(md) {
+                    flex-basis: 45%;
+                }
+            }
+        }
     }
 
     .woocommerce-MyAccount-navigation {
@@ -24,14 +40,38 @@
     }
 
     .woocommerce-EditAccountForm {
+
+        @include breakpoint(md) {
+            position: relative;
+        }
+
         .woocommerce-form-row {
             display: flex;
             flex-direction: column;
+
+            @include breakpoint(md) {
+                width: 47%;
+            }
         }
 
         .woocommerce-Button {
             @include dark-button;
             padding: 10px 20px;
+        }
+
+        fieldset {
+            @include breakpoint(md) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 47%;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+
+                .woocommerce-form-row {
+                    width: 100%;
+
+                }
+            }
         }
     }
 
@@ -69,13 +109,37 @@
         }
     }
 
-    .woocommerce-orders-table__row {
-        display: block;
-        margin-top: 20px;
+    .woocommerce-orders-table {
+        tbody {
+            @include breakpoint(md) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &__row {
+            display: block;
+            margin-top: 20px;
+            border-top: 3px solid rgba(0, 0, 0, 0.2);
+
+            @include breakpoint(md) {
+                width: 47%;
+                padding: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+
+            td:nth-of-type(odd) {
+                background-color: rgba(0, 166, 255, 0.1);
+            }
+        }
     }
 
     .woocommerce-order-details {
         font-size: 14px;
+
+        @include breakpoint(md) {
+            flex-basis: 40%;
+        }
 
         th,
         .woocommerce-table__product-name {
@@ -88,6 +152,12 @@
         }
     }
 
+    .woocommerce-customer-details {
+        @include breakpoint(md) {
+            flex-basis: 50%;
+        }
+    }
+
     .woocommerce-address-fields {
         input {
             display: block;
@@ -95,6 +165,23 @@
 
         .button {
             @include dark-button;
+        }
+    }
+
+    &.woocommerce-view-order {
+        .woocommerce-MyAccount-content {
+            @include breakpoint(md) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100vw;
+            }
+
+            p {
+                @include breakpoint(md) {
+                    flex-basis: 100%;
+                }
+            }
         }
     }
 }
