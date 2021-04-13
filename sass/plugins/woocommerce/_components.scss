@@ -280,6 +280,10 @@ p.no-comments {
 	border-radius: 50%;
 	background-color: rgba($color__link-visited, .4);
 	color: $color__text-secondary;
+
+	@include breakpoint(xs) {
+		right: 20%;
+	}
 }
 
 @media screen and (min-width: 48em) {

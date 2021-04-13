@@ -126,6 +126,10 @@
             }
 
             .shop_table {
+                @include breakpointPortrait(xs) {
+                    width: 60%;
+                }
+
                 tr {
                     display: block;
                     margin: 10px 0;
@@ -135,7 +139,7 @@
                     padding-left: 25vw;
 
                     @include breakpoint(xs) {
-                        padding-left: 40vw;
+                        padding-left: 50%;
                     }
 
                     li {

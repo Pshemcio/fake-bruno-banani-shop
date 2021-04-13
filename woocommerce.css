@@ -43,25 +43,6 @@ table.shop_table_responsive tr td.download-actions .button {
 	text-align: center;
 }
 
-@media screen and (min-width: 48em) {
-	table.shop_table_responsive thead {
-		display: table-header-group;
-	}
-	table.shop_table_responsive tbody th {
-		display: table-cell;
-	}
-	table.shop_table_responsive tr th,
-	table.shop_table_responsive tr td {
-		text-align: left;
-	}
-	table.shop_table_responsive tr td {
-		display: table-cell;
-	}
-	table.shop_table_responsive tr td::before {
-		display: none;
-	}
-}
-
 /**
  * Products
  */
@@ -180,6 +161,12 @@ ul.products li.product .button {
 	}
 }
 
+@media (min-width: 512px) and (orientation: portrait) {
+	.single-product div.product .variations_form {
+		width: 45%;
+	}
+}
+
 .single-product div.product .related h2 {
 	color: #2b2929;
 }
@@ -274,6 +261,12 @@ ul.products li.product .button {
 @media (min-width: 512px) {
 	.single-product div.product .woocommerce-product-gallery__image img {
 		height: 60vh;
+	}
+}
+
+@media (min-width: 512px) and (orientation: portrait) {
+	.single-product div.product .woocommerce-product-gallery__image img {
+		height: 40vh;
 	}
 }
 
@@ -640,6 +633,12 @@ ul.products li.product .button {
 	margin: 10px 0;
 }
 
+@media (min-width: 512px) and (orientation: portrait) {
+	.woocommerce-cart .woocommerce .cart_totals .shop_table {
+		width: 60%;
+	}
+}
+
 .woocommerce-cart .woocommerce .cart_totals .shop_table tr {
 	display: block;
 	margin: 10px 0;
@@ -651,7 +650,7 @@ ul.products li.product .button {
 
 @media (min-width: 512px) {
 	.woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-methods {
-		padding-left: 40vw;
+		padding-left: 50%;
 	}
 }
 
@@ -923,6 +922,12 @@ p.no-comments {
 	color: #eee;
 }
 
+@media (min-width: 512px) {
+	.onsale {
+		right: 20%;
+	}
+}
+
 @media screen and (min-width: 48em) {
 	/**
 	 * Header cart
@@ -1024,6 +1029,12 @@ p.no-comments {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+@media (min-width: 512px) {
+	.widget_shopping_cart_content .woocommerce-mini-cart-item a + a {
+		flex-basis: 50%;
+	}
 }
 
 .widget_shopping_cart_content .woocommerce-mini-cart-item a + a img {

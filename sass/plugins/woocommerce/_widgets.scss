@@ -92,6 +92,10 @@
 				overflow: hidden;
 				text-overflow: ellipsis;
 
+				@include breakpoint(xs) {
+					flex-basis: 50%;
+				}
+
 				img {
 					display: none;
 				}

@@ -50,6 +50,10 @@
 			@include breakpoint(xs) {
 				width: 80%;
 			}
+
+			@include breakpointPortrait(xs) {
+				width: 45%;
+			}
 		}
 
 		.related {
@@ -150,6 +154,10 @@
 
 					@include breakpoint(xs) {
 						height: 60vh;
+					}
+
+					@include breakpointPortrait(xs) {
+						height: 40vh;
 					}
 				}
 			}

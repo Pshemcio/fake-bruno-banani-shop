@@ -139,6 +139,11 @@
 		right: 30vw;
 	}
 
+	@include breakpointPortrait(xs) {
+		height: 94vh;
+		right: 50vw;
+	}
+
 	.site-navigation__icons,
 	.menu-main-navigation-container {
 		position: relative;
@@ -245,6 +250,11 @@
 
 	@include breakpoint(xs) {
 		left: 30vw;
+	}
+
+	@include breakpointPortrait(xs) {
+		height: 94vh;
+		left: 50vw;
 	}
 }
 

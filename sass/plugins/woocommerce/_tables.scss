@@ -53,35 +53,35 @@ table.shop_table_responsive {
 	}
 }
 
-@media screen and (min-width: 48em) {
+// @media screen and (min-width: 48em) {
 
-	table.shop_table_responsive {
+// 	table.shop_table_responsive {
 
-		thead {
-			display: table-header-group;
-		}
+// 		thead {
+// 			display: table-header-group;
+// 		}
 
-		tbody {
+// 		tbody {
 
-			th {
-				display: table-cell;
-			}
-		}
+// 			th {
+// 				display: table-cell;
+// 			}
+// 		}
 
-		tr {
+// 		tr {
 
-			th,
-			td {
-				text-align: left;
-			}
+// 			th,
+// 			td {
+// 				text-align: left;
+// 			}
 
-			td {
-				display: table-cell;
+// 			td {
+// 				display: table-cell;
 
-				&::before {
-					display: none;
-				}
-			}
-		}
-	}
-}
+// 				&::before {
+// 					display: none;
+// 				}
+// 			}
+// 		}
+// 	}
+// }

@@ -464,6 +464,7 @@ big {
 body {
 	background: #fff;
 	padding-top: 10vh;
+	overflow-y: scroll;
 }
 
 @media (min-width: 512px) and (orientation: portrait) {
@@ -772,6 +773,13 @@ textarea {
 	}
 }
 
+@media (min-width: 512px) and (orientation: portrait) {
+	.main-navigation {
+		height: 94vh;
+		right: 50vw;
+	}
+}
+
 .main-navigation .site-navigation__icons,
 .main-navigation .menu-main-navigation-container {
 	position: relative;
@@ -876,6 +884,13 @@ textarea {
 @media (min-width: 512px) {
 	.widget_shopping_cart_content {
 		left: 30vw;
+	}
+}
+
+@media (min-width: 512px) and (orientation: portrait) {
+	.widget_shopping_cart_content {
+		height: 94vh;
+		left: 50vw;
 	}
 }
 
