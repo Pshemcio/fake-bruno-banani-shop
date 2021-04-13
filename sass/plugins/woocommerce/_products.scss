@@ -30,6 +30,10 @@ ul.products {
 		margin-bottom: 2em;
 		text-align: center;
 
+		@include breakpoint(md) {
+			flex-basis: 25%;
+		}
+
 		a {
 			color: $color__text-main;
 		}

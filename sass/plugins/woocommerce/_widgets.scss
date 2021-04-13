@@ -119,3 +119,11 @@
 		}
 	}
 }
+
+// advanced woocommerce search bar
+.aws-container {
+	@include breakpoint(md) {
+		width: 50%;
+		margin-left: auto;
+	}
+}

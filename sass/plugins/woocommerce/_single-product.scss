@@ -51,6 +51,10 @@
 				width: 80%;
 			}
 
+			@include breakpoint(md) {
+				width: 40%;
+			}
+
 			@include breakpointPortrait(xs) {
 				width: 45%;
 			}

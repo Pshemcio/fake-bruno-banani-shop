@@ -139,6 +139,10 @@
 		right: 30vw;
 	}
 
+	@include breakpoint(md) {
+		right: 65vw;
+	}
+
 	@include breakpointPortrait(xs) {
 		height: 94vh;
 		right: 50vw;
@@ -250,6 +254,10 @@
 
 	@include breakpoint(xs) {
 		left: 30vw;
+	}
+
+	@include breakpoint(md) {
+		left: 65vw;
 	}
 
 	@include breakpointPortrait(xs) {

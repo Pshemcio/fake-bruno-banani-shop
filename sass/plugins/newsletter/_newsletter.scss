@@ -7,24 +7,55 @@
         padding: 20px $padding__main*3;
     }
 
+    @include breakpoint(md) {
+        height: 50vh;
+    }
+
+    &__wrapper {
+        @include breakpoint(md) {
+            width: 42vw;
+            height: 100%;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
     &__heading,
     &__paragraph {
         margin: 0;
         text-align: center;
+
+        @include breakpoint(md) {
+            text-align: left;
+        }
     }
 
     &__heading {
         font-size: 2.5em;
         padding-top: 15px;
+
+        @include breakpoint(md) {
+            font-weight: 300;
+        }
     }
 
     &__paragraph {
         padding: 0 15px;
+
+        @include breakpoint(md) {
+            padding: 0;
+        }
     }
 
     .tnp-subscription {
         form {
             padding: 0 20px;
+
+            @include breakpoint(md) {
+                padding: 0;
+            }
         }
 
         input[type="email"] {

@@ -82,6 +82,12 @@ ul.products li.product {
 	text-align: center;
 }
 
+@media (min-width: 992px) {
+	ul.products li.product {
+		flex-basis: 25%;
+	}
+}
+
 ul.products li.product a {
 	color: #2b2929;
 }
@@ -158,6 +164,12 @@ ul.products li.product .button {
 @media (min-width: 512px) {
 	.single-product div.product .variations_form {
 		width: 80%;
+	}
+}
+
+@media (min-width: 992px) {
+	.single-product div.product .variations_form {
+		width: 40%;
 	}
 }
 
@@ -633,6 +645,29 @@ ul.products li.product .button {
 	margin: 10px 0;
 }
 
+@media (min-width: 992px) {
+	.woocommerce-cart .woocommerce .cart_totals {
+		position: relative;
+	}
+	.woocommerce-cart .woocommerce .cart_totals::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 45%;
+		background-image: url(images/men-fragrance.jpg);
+		background-size: cover;
+		background-position-x: center;
+	}
+}
+
+@media (min-width: 992px) {
+	.woocommerce-cart .woocommerce .cart_totals .shop_table {
+		width: 50%;
+	}
+}
+
 @media (min-width: 512px) and (orientation: portrait) {
 	.woocommerce-cart .woocommerce .cart_totals .shop_table {
 		width: 60%;
@@ -1060,6 +1095,13 @@ p.no-comments {
 
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons .button:first-of-type {
 	margin-right: 10px;
+}
+
+@media (min-width: 992px) {
+	.aws-container {
+		width: 50%;
+		margin-left: auto;
+	}
 }
 
 /**

@@ -13,13 +13,14 @@
 
 <footer id="site-footer" class="site-footer">
     <section class="newsletter">
-        <h3 class="newsletter__heading">Newsletter</h3>
-        <p class="newsletter__paragraph">
-            Zapisz się do naszego newslettera żeby dostać 15% zniżkę na następne zamówienie!
-        </p>
+        <div class="newsletter__wrapper">
+            <h3 class="newsletter__heading">Newsletter</h3>
+            <p class="newsletter__paragraph">
+                Zapisz się do naszego newslettera żeby dostać 15% zniżkę na następne zamówienie!
+            </p>
 
-        <?php echo do_shortcode('[newsletter]'); ?>
-
+            <?php echo do_shortcode('[newsletter]'); ?>
+        </div>
     </section>
     <div class="site-footer__wrapper">
         <div class="footer-container">
