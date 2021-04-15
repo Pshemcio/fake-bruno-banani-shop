@@ -146,7 +146,7 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
-	right: 10vw;
+	width: 340px;
 	height: 91vh;
 	display: flex;
 	flex-flow: column nowrap;
@@ -156,21 +156,15 @@
 	transition: transform 1.1s .3s cubic-bezier(1, 0, 0, 1);
 
 	@include breakpoint(xs) {
-		right: 30vw;
-	}
-
-	@include breakpoint(md) {
-		right: 65vw;
+		width: 350px;
 	}
 
 	@include breakpoint(xl) {
 		height: 93vh;
-		right: 75vw;
 	}
 
 	@include breakpointPortrait(xs) {
 		height: 94vh;
-		right: 50vw;
 	}
 
 	.site-navigation__icons,
@@ -191,10 +185,14 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		padding-bottom: 10vh;
+		padding-bottom: 100px;
 
-		@include breakpoint(lg) {
+		@include breakpoint(sm) {
 			padding-bottom: 20px;
+		}
+
+		@include breakpointPortrait(sm) {
+			padding-bottom: 100px;
 		}
 	}
 
@@ -217,10 +215,18 @@
 		display: block;
 		color: inherit;
 		font-weight: 500;
-		padding: 16px 0;
+		padding: 15px 0;
 		width: 100%;
 		text-transform: uppercase;
 		overflow: hidden;
+
+		@include breakpoint(xs) {
+			padding: 12px 0;
+		}
+
+		@include breakpoint(md) {
+			padding: 16px 0;
+		}
 
 		i {
 			margin-right: 5px;
@@ -296,7 +302,7 @@
 .widget_shopping_cart_content {
 	position: absolute;
 	top: 100%;
-	left: 10vw;
+	width: 340px;
 	right: 0;
 	height: 91vh;
 	background-color: $color__background-body;
@@ -304,21 +310,15 @@
 	transition: transform 1.1s cubic-bezier(1, 0, 0, 1);
 
 	@include breakpoint(xs) {
-		left: 30vw;
-	}
-
-	@include breakpoint(md) {
-		left: 65vw;
+		width: 350px;
 	}
 
 	@include breakpoint(xl) {
 		height: 93vh;
-		left: 75vw;
 	}
 
 	@include breakpointPortrait(xs) {
 		height: 94vh;
-		left: 50vw;
 	}
 }
 

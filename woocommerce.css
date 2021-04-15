@@ -1271,7 +1271,7 @@ p.no-comments {
 
 @media (min-width: 512px) {
 	.widget_shopping_cart_content .woocommerce-mini-cart-item a + a {
-		flex-basis: 50%;
+		flex-basis: 60%;
 	}
 }
 
