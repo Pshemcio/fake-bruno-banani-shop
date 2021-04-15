@@ -867,19 +867,7 @@ ul.products li.product .button {
 
 @media (min-width: 1200px) {
 	.woocommerce-cart .woocommerce .cart_totals .shop_table {
-		width: 40%;
-	}
-}
-
-@media (min-width: 512px) and (orientation: portrait) {
-	.woocommerce-cart .woocommerce .cart_totals .shop_table {
-		width: 65%;
-	}
-}
-
-@media (min-width: 992px) and (orientation: portrait) {
-	.woocommerce-cart .woocommerce .cart_totals .shop_table {
-		width: 40%;
+		width: 45%;
 	}
 }
 
@@ -888,26 +876,19 @@ ul.products li.product .button {
 	margin: 10px 0;
 }
 
+.woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-totals td {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
 .woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-methods {
-	padding-left: 30vw;
-}
-
-@media (min-width: 512px) {
-	.woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-methods {
-		padding-left: 50%;
-	}
-}
-
-@media (min-width: 992px) {
-	.woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-methods {
-		padding-left: 30%;
-	}
-}
-
-@media (min-width: 1200px) {
-	.woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-methods {
-		padding-left: 40%;
-	}
+	flex-grow: 1;
+	margin: 0;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-methods li {
@@ -915,6 +896,7 @@ ul.products li.product .button {
 	justify-content: space-between;
 	align-items: center;
 	font-size: 15px;
+	min-width: 210px;
 }
 
 .woocommerce-cart .woocommerce .cart_totals .shop_table .woocommerce-shipping-destination strong {
