@@ -468,6 +468,18 @@ body {
 	overflow-y: scroll;
 }
 
+@media (min-width: 512px) {
+	body {
+		padding-top: 12vh;
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		padding-top: 10vh;
+	}
+}
+
 @media (min-width: 512px) and (orientation: portrait) {
 	body {
 		padding-top: 6vh;
@@ -1352,6 +1364,7 @@ textarea {
 		justify-content: space-between;
 		align-items: flex-start;
 		width: 60%;
+		max-width: 1200px;
 		margin: 60px auto 0;
 		text-align: left;
 	}
