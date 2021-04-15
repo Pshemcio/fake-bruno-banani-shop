@@ -27,7 +27,7 @@
         <a class="skip-link screen-reader-text"
             href="#primary"><?php esc_html_e( 'Skip to content', 'my-shop-theme' ); ?></a>
 
-        <header id="masthead" class="site-header">
+        <header id="masthead" class="site-header js-desktop-shrink">
 
             <button id="js-burger" class="burger" aria-controls="primary-menu" aria-expanded="false">
                 <span class="burger__inner"></span>

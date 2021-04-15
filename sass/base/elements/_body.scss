@@ -12,6 +12,10 @@ body {
 		padding-top: 10vh;
 	}
 
+	@include breakpoint(xl) {
+		padding-top: 8vh;
+	}
+
 	@include breakpointPortrait(xs) {
 		padding-top: 6vh;
 	}

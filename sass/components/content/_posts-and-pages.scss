@@ -34,7 +34,6 @@
 }
 
 .entry-header {
-	// @include breakpoint(xs) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -42,10 +41,8 @@
 	text-align: center;
 	position: relative;
 	max-width: 1200px;
-	// }
 
 	&::before {
-		// @include breakpoint(xs) {
 		content: '';
 		display: block;
 		position: absolute;
@@ -56,7 +53,6 @@
 		z-index: -1;
 		transform: translateY(-50%);
 		background-color: rgba(0, 0, 0, 0.7);
-		// }
 
 		@include breakpoint(xs) {
 			left: 10vw;

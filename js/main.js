@@ -30,6 +30,7 @@ const showModal = () => {
     body.style.position = 'fixed';
     body.style.top = `-${scrollY}`;
 };
+
 const closeModal = () => {
     const body = document.body;
     const scrollY = body.style.top;
@@ -40,6 +41,10 @@ const closeModal = () => {
 };
 
 const handleNavButtonClick = (className) => {
+    if (className === 'reset' && !document.body.classList.contains('has-modal')) {
+        return;
+    }
+
     if (className === 'search-bar--active' && document.body.classList.contains('has-modal')) {
         closeModal();
     }
@@ -93,6 +98,7 @@ const handleNavSubmenu = (e) => {
 };
 
 const handleNavigation = (e) => {
+    console.log(e.target.id);
     switch (e.target.id) {
         case 'js-burger':
             handleNavButtonClick('main-menu--active');

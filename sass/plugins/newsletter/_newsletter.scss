@@ -74,6 +74,11 @@
             width: auto;
             padding: 10px 30px;
             margin-right: auto;
+            transition: background-color .4s cubic-bezier(1, -0.01, 0.38, 0.85);
+
+            &:hover {
+                background-color: $color__text-screen;
+            }
         }
     }
 }
