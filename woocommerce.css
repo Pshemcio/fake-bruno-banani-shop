@@ -269,8 +269,21 @@ ul.products li.product .button {
 	color: #fff;
 	background-color: #2b2929;
 	padding: 10px;
-	border: 1px solid #2b2929;
+	border: 1px solid rgba(43, 41, 41, 0.7);
 	border-radius: 0;
+}
+
+@media (min-width: 992px) {
+	.single-product div.product .woocommerce-variation-add-to-cart .single_add_to_cart_button {
+		transition: background-color .4s, color .4s;
+	}
+}
+
+@media (min-width: 992px) {
+	.single-product div.product .woocommerce-variation-add-to-cart .single_add_to_cart_button:hover {
+		background-color: #f1f1f1;
+		color: #2b2929;
+	}
 }
 
 .single-product div.product .submit {
@@ -412,9 +425,22 @@ ul.products li.product .button {
 	color: #fff;
 	background-color: #2b2929;
 	padding: 10px;
-	border: 1px solid #2b2929;
+	border: 1px solid rgba(43, 41, 41, 0.7);
 	border-radius: 0;
 	padding: 10px 20px;
+}
+
+@media (min-width: 992px) {
+	.woocommerce-checkout .button {
+		transition: background-color .4s, color .4s;
+	}
+}
+
+@media (min-width: 992px) {
+	.woocommerce-checkout .button:hover {
+		background-color: #f1f1f1;
+		color: #2b2929;
+	}
 }
 
 .woocommerce-checkout .form-row {
@@ -637,8 +663,23 @@ ul.products li.product .button {
 	color: #fff;
 	background-color: #2b2929;
 	padding: 10px;
-	border: 1px solid #2b2929;
+	border: 1px solid rgba(43, 41, 41, 0.7);
 	border-radius: 0;
+}
+
+@media (min-width: 992px) {
+	.woocommerce-cart .woocommerce button,
+	.woocommerce-cart .woocommerce .checkout-button {
+		transition: background-color .4s, color .4s;
+	}
+}
+
+@media (min-width: 992px) {
+	.woocommerce-cart .woocommerce button:hover,
+	.woocommerce-cart .woocommerce .checkout-button:hover {
+		background-color: #f1f1f1;
+		color: #2b2929;
+	}
 }
 
 @media (min-width: 512px) {
@@ -662,7 +703,7 @@ ul.products li.product .button {
 
 @media (min-width: 992px) {
 	.woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item {
-		padding: 20px 50px 0 0;
+		padding: 0 50px 0 0;
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		width: 100%;
@@ -678,7 +719,7 @@ ul.products li.product .button {
 
 @media (min-width: 992px) {
 	.woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-remove {
-		top: 50%;
+		top: 40%;
 	}
 }
 
@@ -1276,11 +1317,24 @@ p.no-comments {
 	color: #fff;
 	background-color: #2b2929;
 	padding: 10px;
-	border: 1px solid #2b2929;
+	border: 1px solid rgba(43, 41, 41, 0.7);
 	border-radius: 0;
 	flex-basis: 48%;
 	text-align: center;
 	padding: 10px 0;
+}
+
+@media (min-width: 992px) {
+	.widget_shopping_cart_content .woocommerce-mini-cart__buttons .button {
+		transition: background-color .4s, color .4s;
+	}
+}
+
+@media (min-width: 992px) {
+	.widget_shopping_cart_content .woocommerce-mini-cart__buttons .button:hover {
+		background-color: #f1f1f1;
+		color: #2b2929;
+	}
 }
 
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons .button:first-of-type {
@@ -1356,9 +1410,24 @@ p.no-comments {
 	color: #fff;
 	background-color: #2b2929;
 	padding: 10px;
-	border: 1px solid #2b2929;
+	border: 1px solid rgba(43, 41, 41, 0.7);
 	border-radius: 0;
 	display: block;
+}
+
+@media (min-width: 992px) {
+	.woocommerce-account .form-row .woocommerce-Button,
+	.woocommerce-account .form-row .woocommerce-button {
+		transition: background-color .4s, color .4s;
+	}
+}
+
+@media (min-width: 992px) {
+	.woocommerce-account .form-row .woocommerce-Button:hover,
+	.woocommerce-account .form-row .woocommerce-button:hover {
+		background-color: #f1f1f1;
+		color: #2b2929;
+	}
 }
 
 @media (min-width: 992px) {
@@ -1383,9 +1452,22 @@ p.no-comments {
 	color: #fff;
 	background-color: #2b2929;
 	padding: 10px;
-	border: 1px solid #2b2929;
+	border: 1px solid rgba(43, 41, 41, 0.7);
 	border-radius: 0;
 	padding: 10px 20px;
+}
+
+@media (min-width: 992px) {
+	.woocommerce-account .woocommerce-EditAccountForm .woocommerce-Button {
+		transition: background-color .4s, color .4s;
+	}
+}
+
+@media (min-width: 992px) {
+	.woocommerce-account .woocommerce-EditAccountForm .woocommerce-Button:hover {
+		background-color: #f1f1f1;
+		color: #2b2929;
+	}
 }
 
 @media (min-width: 992px) {
@@ -1502,8 +1584,21 @@ p.no-comments {
 	color: #fff;
 	background-color: #2b2929;
 	padding: 10px;
-	border: 1px solid #2b2929;
+	border: 1px solid rgba(43, 41, 41, 0.7);
 	border-radius: 0;
+}
+
+@media (min-width: 992px) {
+	.woocommerce-account .woocommerce-address-fields .button {
+		transition: background-color .4s, color .4s;
+	}
+}
+
+@media (min-width: 992px) {
+	.woocommerce-account .woocommerce-address-fields .button:hover {
+		background-color: #f1f1f1;
+		color: #2b2929;
+	}
 }
 
 @media (min-width: 992px) {

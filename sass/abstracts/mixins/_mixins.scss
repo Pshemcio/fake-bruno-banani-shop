@@ -16,6 +16,17 @@
 	color: $color__background-body;
 	background-color: $color__text-main;
 	padding: 10px;
-	border: 1px solid $color__text-main;
+	border: 1px solid rgba($color__text-main, .7);
 	border-radius: 0;
+
+	@include breakpoint(md) {
+		transition: background-color .4s, color .4s;
+	}
+
+	&:hover {
+		@include breakpoint(md) {
+			background-color: $color__background-screen;
+			color: $color__text-main;
+		}
+	}
 }

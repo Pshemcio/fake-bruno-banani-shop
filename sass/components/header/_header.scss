@@ -67,6 +67,12 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		margin: 0 5px;
+		transform: translateX(19px);
+
+		@include breakpoint(md) {
+			height: 35px;
+			margin: 0 10vw;
+		}
 	}
 
 	i {

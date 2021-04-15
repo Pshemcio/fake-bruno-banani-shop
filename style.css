@@ -573,6 +573,7 @@ input[type="submit"] {
 	color: rgba(0, 0, 0, 0.8);
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
+	cursor: pointer;
 }
 
 button:hover,
@@ -720,6 +721,14 @@ textarea {
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: 0 5px;
+	transform: translateX(19px);
+}
+
+@media (min-width: 992px) {
+	.site-header .site-branding {
+		height: 35px;
+		margin: 0 10vw;
+	}
 }
 
 .site-header i {
@@ -937,22 +946,69 @@ textarea {
 
 .post h1,
 .page h1 {
-	margin: 15px 0 0 10px;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 15px 20px;
+	background-color: #fff;
+	font-weight: 400;
 }
 
 @media (min-width: 512px) {
 	.post h1,
 	.page h1 {
-		margin: 25px 0 10px 10vw;
+		font-size: 24px;
+		padding: 15px 30px;
+	}
+}
+
+@media (min-width: 840px) {
+	.post h1,
+	.page h1 {
+		font-size: 26px;
+		padding: 15px 40px;
+	}
+}
+
+.entry-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 10px;
+	text-align: center;
+	position: relative;
+	max-width: 1200px;
+}
+
+.entry-header::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	right: 10px;
+	height: 1px;
+	z-index: -1;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 512px) {
+	.entry-header::before {
+		left: 10vw;
+		right: 10vw;
 	}
 }
 
 @media (min-width: 1366px) {
-	.post h1,
-	.page h1 {
-		max-width: 1200px;
-		margin: 25px auto;
+	.entry-header::before {
+		left: -3vw;
+		right: -3vw;
 	}
+}
+
+.entry-header .entry-title {
+	letter-spacing: 1px;
 }
 
 .updated:not(.published) {
