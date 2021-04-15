@@ -43,7 +43,7 @@
                 .product {
                     &-remove {
                         position: absolute;
-                        top: 5%;
+                        top: 7.5%;
                         right: 0;
                         font-size: 40px;
 
@@ -70,18 +70,19 @@
                         a {
                             display: block;
                             text-align: center;
+                            width: 100px;
 
                             img {
                                 display: block;
                                 height: 100px;
-                                width: 100px;
-                                object-fit: contain;
+                                width: auto;
+                                margin: 0 auto;
                             }
                         }
                     }
 
                     &-name {
-                        flex-basis: 70%;
+                        flex-basis: 60%;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;

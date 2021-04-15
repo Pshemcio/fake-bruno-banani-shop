@@ -55,8 +55,6 @@ ul.products {
 		.tp-image-hover {
 			top: 50%;
 			left: 50%;
-			width: 175px !important;
-			height: 280px !important;
 			transform: translate(-50%, -50%);
 			transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 		}
@@ -65,9 +63,8 @@ ul.products {
 		.tp-image-hover {
 			display: block;
 			margin: 0 auto;
-			width: 145px;
+			width: auto;
 			height: 180px;
-			object-fit: contain;
 		}
 
 		.price {

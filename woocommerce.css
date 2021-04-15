@@ -111,8 +111,6 @@ ul.products li.product h2 {
 ul.products li.product .tp-image-hover {
 	top: 50%;
 	left: 50%;
-	width: 175px !important;
-	height: 280px !important;
 	transform: translate(-50%, -50%);
 	transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -121,9 +119,8 @@ ul.products li.product img,
 ul.products li.product .tp-image-hover {
 	display: block;
 	margin: 0 auto;
-	width: 145px;
+	width: auto;
 	height: 180px;
-	object-fit: contain;
 }
 
 ul.products li.product .price {
@@ -704,7 +701,7 @@ ul.products li.product .button {
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-remove {
 	position: absolute;
-	top: 5%;
+	top: 7.5%;
 	right: 0;
 	font-size: 40px;
 }
@@ -736,17 +733,18 @@ ul.products li.product .button {
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-thumbnail a {
 	display: block;
 	text-align: center;
+	width: 100px;
 }
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-thumbnail a img {
 	display: block;
 	height: 100px;
-	width: 100px;
-	object-fit: contain;
+	width: auto;
+	margin: 0 auto;
 }
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item .product-name {
-	flex-basis: 70%;
+	flex-basis: 60%;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
