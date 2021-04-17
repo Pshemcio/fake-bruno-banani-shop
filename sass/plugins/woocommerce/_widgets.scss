@@ -141,3 +141,20 @@
 		}
 	}
 }
+
+.woo-variation-swatches {
+	.variable-items-wrapper {
+		li.variable-item {
+			&.selected {
+				transition: color .4s, background-color .4s;
+				background-color: $color__background-body--secondary;
+				color: $color__text-secondary;
+			}
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+	}
+}

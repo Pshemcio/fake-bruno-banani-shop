@@ -96,14 +96,10 @@
 		}
 
 		.woocommerce-variation-price {
-			&::before {
-				content: 'Cena';
-				padding-right: 21vw;
-			}
-
-			span {
-				font-weight: 700;
-			}
+			margin: 10px 0;
+			font-size: 30px;
+			font-weight: 300;
+			color: $color__link;
 		}
 
 		.stock {
@@ -128,6 +124,13 @@
 			}
 		}
 
+		.variations {
+			margin: 0;
+
+			.label {
+				display: none;
+			}
+		}
 
 		.woocommerce-variation-add-to-cart {
 			@include breakpoint(md) {
@@ -136,6 +139,8 @@
 
 			.input-text {
 				padding: 6px;
+				width: 50px;
+				text-align: center;
 			}
 
 			.single_add_to_cart_button {

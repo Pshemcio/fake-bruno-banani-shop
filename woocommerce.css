@@ -98,6 +98,12 @@ ul.products li.product {
 	}
 }
 
+@media (min-width: 1366px) {
+	ul.products li.product {
+		margin: 50px 0;
+	}
+}
+
 ul.products li.product a {
 	color: #2b2929;
 }
@@ -106,6 +112,13 @@ ul.products li.product h2 {
 	margin: 5px 0 8px;
 	font-size: 15px;
 	font-weight: 400;
+}
+
+@media (min-width: 1366px) {
+	ul.products li.product h2 {
+		font-size: 18px;
+		margin: 10px 0 3px;
+	}
 }
 
 ul.products li.product .tp-image-hover {
@@ -123,12 +136,48 @@ ul.products li.product .tp-image-hover {
 	height: 180px;
 }
 
+@media (min-width: 1366px) {
+	ul.products li.product img,
+	ul.products li.product .tp-image-hover {
+		height: 250px;
+	}
+}
+
 ul.products li.product .price {
 	color: #21759b;
 }
 
+@media (min-width: 1366px) {
+	ul.products li.product .price {
+		font-size: 20px;
+	}
+}
+
 ul.products li.product .button {
 	display: none;
+}
+
+.woocommerce-pagination ul.page-numbers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.woocommerce-pagination ul.page-numbers .page-numbers {
+	display: block;
+	width: 40px;
+	height: 40px;
+	display: grid;
+	place-items: center;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.woocommerce-pagination ul.page-numbers .page-numbers.current {
+	background-color: #000;
+	color: #eee;
 }
 
 /**
@@ -233,13 +282,11 @@ ul.products li.product .button {
 	color: #2b2929;
 }
 
-.single-product div.product .woocommerce-variation-price::before {
-	content: 'Cena';
-	padding-right: 21vw;
-}
-
-.single-product div.product .woocommerce-variation-price span {
-	font-weight: 700;
+.single-product div.product .woocommerce-variation-price {
+	margin: 10px 0;
+	font-size: 30px;
+	font-weight: 300;
+	color: #21759b;
 }
 
 .single-product div.product .stock {
@@ -264,6 +311,14 @@ ul.products li.product .button {
 	}
 }
 
+.single-product div.product .variations {
+	margin: 0;
+}
+
+.single-product div.product .variations .label {
+	display: none;
+}
+
 @media (min-width: 992px) {
 	.single-product div.product .woocommerce-variation-add-to-cart {
 		justify-content: flex-start;
@@ -272,6 +327,8 @@ ul.products li.product .button {
 
 .single-product div.product .woocommerce-variation-add-to-cart .input-text {
 	padding: 6px;
+	width: 50px;
+	text-align: center;
 }
 
 .single-product div.product .woocommerce-variation-add-to-cart .single_add_to_cart_button {
@@ -1151,7 +1208,7 @@ p.no-comments {
 	place-items: center;
 	position: absolute;
 	top: 5px;
-	right: 20px;
+	left: 10px;
 	z-index: 2;
 	width: 40px;
 	height: 40px;
@@ -1162,7 +1219,7 @@ p.no-comments {
 
 @media (min-width: 512px) {
 	.onsale {
-		right: 20%;
+		left: 20%;
 	}
 }
 
@@ -1325,6 +1382,16 @@ p.no-comments {
 
 .aws-container .aws-search-form .aws-form-btn svg {
 	color: #eee;
+}
+
+.woo-variation-swatches .variable-items-wrapper li.variable-item.selected {
+	transition: color .4s, background-color .4s;
+	background-color: #000;
+	color: #eee;
+}
+
+.woo-variation-swatches .variable-items-wrapper li.variable-item::before, .woo-variation-swatches .variable-items-wrapper li.variable-item::after {
+	display: none;
 }
 
 /**

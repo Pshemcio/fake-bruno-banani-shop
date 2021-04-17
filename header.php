@@ -33,7 +33,6 @@
                 <span class="burger__inner"></span>
             </button>
 
-
             <a href="/" class="site-branding">
 
             </a><!-- .site-branding -->
@@ -86,7 +85,7 @@
                         </a>
                     </li>
                     <li class="site-navigation__icon">
-                        <a href="/kontakt">
+                        <a href="https://pshemcio.github.io/valorant-form/">
                             <i class="fas fa-phone"></i>
                             Kontakt
                         </a>

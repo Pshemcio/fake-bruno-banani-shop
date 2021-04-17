@@ -290,3 +290,19 @@ function woo_related_products_limit() {
 	  $args['columns'] = 2; // arranged in 2 columns
 	  return $args;
   }
+
+  add_filter( 'woocommerce_pagination_args' , 'tq73et_override_pagination_args' );
+function tq73et_override_pagination_args( $args ) {
+	$args['prev_next'] = false;
+	return $args;
+}
+
+// always display product price
+
+add_filter('woocommerce_available_variation', function($available_variations, \WC_Product_Variable $variable, \WC_Product_Variation $variation) {
+    if (empty($available_variations['price_html'])) {
+        $available_variations['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
+    }
+
+    return $available_variations;
+}, 10, 3);

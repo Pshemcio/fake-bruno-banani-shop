@@ -42,6 +42,10 @@ ul.products {
 			flex-basis: 25%;
 		}
 
+		@include breakpoint(xl) {
+			margin: 50px 0;
+		}
+
 		a {
 			color: $color__text-main;
 		}
@@ -50,6 +54,11 @@ ul.products {
 			margin: 5px 0 8px;
 			font-size: 15px;
 			font-weight: 400;
+
+			@include breakpoint(xl) {
+				font-size: 18px;
+				margin: 10px 0 3px;
+			}
 		}
 
 		.tp-image-hover {
@@ -65,14 +74,47 @@ ul.products {
 			margin: 0 auto;
 			width: auto;
 			height: 180px;
+
+			@include breakpoint(xl) {
+				height: 250px;
+			}
 		}
 
 		.price {
 			color: $color__text-screen;
+
+			@include breakpoint(xl) {
+				font-size: 20px;
+			}
 		}
 
 		.button {
 			display: none;
+		}
+	}
+}
+
+.woocommerce-pagination {
+	ul.page-numbers {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+
+		.page-numbers {
+			display: block;
+			width: 40px;
+			height: 40px;
+			display: grid;
+			place-items: center;
+			border: 1px solid rgba($color__background-body--secondary, 0.2);
+
+			&.current {
+				background-color: $color__background-body--secondary;
+				color: $color__text-secondary;
+			}
 		}
 	}
 }

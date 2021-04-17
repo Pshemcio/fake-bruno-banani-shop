@@ -42,10 +42,11 @@
         </div>
 
         <div class="site-footer__socials">
-            <a href="" class="site-footer__social">
+            <a href="https://github.com/Pshemcio" target="_blank" class="site-footer__social">
                 <i class="fab fa-github-square"></i> Github
             </a>
-            <a href="" class="site-footer__social">
+            <a href="https://www.linkedin.com/in/przemys%C5%82aw-majka-9540b01b7/" target="_blank"
+                class="site-footer__social">
                 <i class="fab fa-linkedin"></i> Linkedin
             </a>
         </div>

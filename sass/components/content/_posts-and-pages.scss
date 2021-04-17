@@ -42,6 +42,10 @@
 	position: relative;
 	max-width: 1200px;
 
+	@include breakpoint(xl) {
+		margin: 0 auto 30px;
+	}
+
 	&::before {
 		content: '';
 		display: block;
