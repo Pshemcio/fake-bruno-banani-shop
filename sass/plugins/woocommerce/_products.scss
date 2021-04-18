@@ -42,6 +42,10 @@ ul.products {
 		margin-bottom: 2em;
 		text-align: center;
 
+		@include breakpoint(xs) {
+			flex-basis: 33.333%;
+		}
+
 		@include breakpoint(md) {
 			flex-basis: 25%;
 		}
@@ -77,7 +81,19 @@ ul.products {
 			display: block;
 			margin: 0 auto;
 			width: auto;
-			height: 180px;
+			height: 140px;
+
+			@include breakpoint(xs) {
+				height: 130px;
+			}
+
+			@include breakpoint(sm) {
+				height: 180px;
+			}
+
+			@include breakpointPortrait(xs) {
+				height: 160px;
+			}
 
 			@include breakpoint(xl) {
 				height: 250px;

@@ -1368,6 +1368,55 @@ textarea {
 	}
 }
 
+@media (min-width: 512px) {
+	.shop-section .products {
+		padding: 10px 8vw;
+	}
+}
+
+@media (min-width: 1200px) {
+	.shop-section .products {
+		padding: 10px 0;
+	}
+}
+
+@media (min-width: 512px) {
+	.shop-section .products li.product {
+		flex-basis: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.shop-section .products li.product {
+		flex-basis: 25%;
+	}
+}
+
+@media (min-width: 1366px) {
+	.shop-section .products li.product {
+		margin: 10px 0 30px;
+	}
+}
+
+.shop-section .products li.product img,
+.shop-section .products li.product .tp-image-hover {
+	height: 150px;
+}
+
+@media (min-width: 512px) {
+	.shop-section .products li.product img,
+	.shop-section .products li.product .tp-image-hover {
+		height: 180px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.shop-section .products li.product img,
+	.shop-section .products li.product .tp-image-hover {
+		height: 230px;
+	}
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {

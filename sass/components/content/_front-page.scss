@@ -241,4 +241,41 @@
             font-size: 35px;
         }
     }
+
+    .products {
+        @include breakpoint(xs) {
+            padding: 10px 8vw;
+        }
+
+        @include breakpoint(lg) {
+            padding: 10px 0;
+        }
+
+        li.product {
+            @include breakpoint(xs) {
+                flex-basis: 50%;
+            }
+
+            @include breakpoint(md) {
+                flex-basis: 25%;
+            }
+
+            @include breakpoint(xl) {
+                margin: 10px 0 30px;
+            }
+
+            img,
+            .tp-image-hover {
+                height: 150px;
+
+                @include breakpoint(xs) {
+                    height: 180px;
+                }
+
+                @include breakpoint(lg) {
+                    height: 230px;
+                }
+            }
+        }
+    }
 }
