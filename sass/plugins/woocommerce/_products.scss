@@ -29,7 +29,11 @@ ul.products {
 	margin: 0 auto;
 
 	@include breakpoint(xs) {
-		padding: 0;
+		padding: 10px 10vw;
+	}
+
+	@include breakpoint(lg) {
+		padding: 10px 0;
 	}
 
 	li.product {

@@ -1344,19 +1344,7 @@ textarea {
 }
 
 .shop-section {
-	padding: 30px 10px 10px;
-}
-
-@media (min-width: 512px) {
-	.shop-section {
-		padding: 30px 10vw 10px;
-	}
-}
-
-@media (min-width: 992px) {
-	.shop-section {
-		padding: 30px 5vw 10px;
-	}
+	padding: 30px 0 10px;
 }
 
 .shop-section a {

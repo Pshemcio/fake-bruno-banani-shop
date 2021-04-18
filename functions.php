@@ -306,3 +306,15 @@ add_filter('woocommerce_available_variation', function($available_variations, \W
 
     return $available_variations;
 }, 10, 3);
+
+/** 
+ * Filer WooCommerce Flexslider options - Add Navigation Arrows
+ */
+add_filter( 'woocommerce_single_product_carousel_options', 'sf_update_woo_flexslider_options' );
+
+function sf_update_woo_flexslider_options( $options ) {
+
+    $options['directionNav'] = true;
+
+    return $options;
+}
